@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Form #6</title>
+    <script
+        nonce="595eb897-9c4b-440c-98e1-0e1973fd94e9">(function (w, d) { !function (db, dc, dd, de) { db[dd] = db[dd] || {}; db[dd].executed = []; db.zaraz = { deferred: [], listeners: [] }; db.zaraz.q = []; db.zaraz._f = function (df) { return async function () { var dg = Array.prototype.slice.call(arguments); db.zaraz.q.push({ m: df, a: dg }) } }; for (const dh of ["track", "set", "debug"]) db.zaraz[dh] = db.zaraz._f(dh); db.zaraz.init = () => { var di = dc.getElementsByTagName(de)[0], dj = dc.createElement(de), dk = dc.getElementsByTagName("title")[0]; dk && (db[dd].t = dc.getElementsByTagName("title")[0].text); db[dd].x = Math.random(); db[dd].w = db.screen.width; db[dd].h = db.screen.height; db[dd].j = db.innerHeight; db[dd].e = db.innerWidth; db[dd].l = db.location.href; db[dd].r = dc.referrer; db[dd].k = db.screen.colorDepth; db[dd].n = dc.characterSet; db[dd].o = (new Date).getTimezoneOffset(); if (db.dataLayer) for (const dp of Object.entries(Object.entries(dataLayer).reduce(((dq, dr) => ({ ...dq[1], ...dr[1] })), {}))) zaraz.set(dp[0], dp[1], { scope: "page" }); db[dd].q = []; for (; db.zaraz.q.length;) { const ds = db.zaraz.q.shift(); db[dd].q.push(ds) } dj.defer = !0; for (const dt of [localStorage, sessionStorage]) Object.keys(dt || {}).filter((dv => dv.startsWith("_zaraz_"))).forEach((du => { try { db[dd]["z_" + du.slice(7)] = JSON.parse(dt.getItem(du)) } catch { db[dd]["z_" + du.slice(7)] = dt.getItem(du) } })); dj.referrerPolicy = "origin"; dj.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(db[dd]))); di.parentNode.insertBefore(dj, di) };["complete", "interactive"].includes(dc.readyState) ? zaraz.init() : db.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document);</script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <h3 class="heading mb-4">Let's talk about everything!</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas debitis, fugit natus?
+                            </p>
+                            <p><img src="images/undraw-contact.svg" alt="Image" class="img-fluid"></p>
+                        </div>
+                        <div class="col-md-6">
+                            <form class="mb-5" method="post" id="contactForm" name="contactForm">
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <input type="text" class="form-control" name="name" id="name"
+                                            placeholder="Your name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <input type="text" class="form-control" name="email" id="email"
+                                            placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <input type="text" class="form-control" name="subject" id="subject"
+                                            placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <textarea class="form-control" name="message" id="message" cols="30" rows="7"
+                                            placeholder="Write your message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="submit" value="Send Message"
+                                            class="btn btn-primary rounded-0 py-2 px-4">
+                                        <span class="submitting"></span>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="form-message-warning mt-4"></div>
+                            <div id="form-message-success">
+                                Your message was sent, thank you!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"
+        integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg=="
+        data-cf-beacon='{"rayId":"7fec989738393a19","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.8.0","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
