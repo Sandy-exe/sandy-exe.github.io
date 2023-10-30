@@ -20,7 +20,7 @@ Home:
 About:
 2) Find different measurement
 Porfolio and BLOG:
-3) create a zoom in feature for all projects
+3) Create a dashboard(random sized (collage)) for blog and portfolio
 
 
 IN GENERAL:

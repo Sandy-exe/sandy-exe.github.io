@@ -1,0 +1,5 @@
+some LINK:
+1) https://codemyui.com/slide-in-and-out-timeline-animation/ (Moving timeline)
+2) https://codemyui.com/css-only-material-design-admit-ticket-info-card-design/ (ticket like desing )
+3) https://codemyui.com/material-design-recipe-card-design-with-slideout-panel-for-instructions-and-ingredients/ (Card_detail design)
+4) https://codemyui.com/gradient-card-ui-image-info-slider/ (card_detail desing 2)
