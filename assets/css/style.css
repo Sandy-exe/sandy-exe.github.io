@@ -114,7 +114,6 @@ p {
   }
 }
 
-
 /*===== All Button Style =====*/
 .main-btn {
   display: inline-block;
@@ -181,7 +180,6 @@ p {
     font-size: 30px;
   }
 }
-
 
 /*===========================
     2.HEADER css 
@@ -323,7 +321,7 @@ p {
 
 .navigation .navbar .navbar-nav .nav-item a::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 3px;
   height: 0;
   background-color: #324468;
@@ -404,6 +402,8 @@ p {
 .container {
   position: relative;
   left: -10px;
+  width: 100%;                 /* Take up full width of the parent */
+  height: 100%;
 }
 
 .header-content .header-shape.lines45 img {
@@ -526,7 +526,6 @@ p {
   }
 }
 
-
 .header-content .header-shape.shape-nine {
   left: 50% !important;
   -webkit-transform: translateX(-50%);
@@ -552,7 +551,6 @@ p {
 }
 
 .header-content .header-shape.Squares {
-
   left: auto !important;
   top: -150px !important;
   right: -270px !important;
@@ -618,7 +616,6 @@ p {
   left: 50px;
 }
 
-
 .header-social {
   position: absolute;
   bottom: 30px;
@@ -632,7 +629,7 @@ p {
 
 .header-social .header-social-icon::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   height: 2px;
   background-color: #324468;
@@ -706,6 +703,7 @@ p {
   align-items: center;
   margin-bottom: 50px;
   font-size: 50px;
+  gap: 10px;
 }
 
 .about-me {
@@ -780,8 +778,6 @@ p {
   transition: 2s;
 }
 
-
-
 @media (max-width: 991.98px) {
   .about .about-content {
     padding: 45px 15px 0 15px;
@@ -796,7 +792,6 @@ p {
   position: relative;
   padding: 45px 0 15px 0;
   background-color: #fbfbfb;
-
 }
 
 .experience .section-header {
@@ -810,7 +805,7 @@ p {
 }
 
 .experience .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 2px;
   background: #658eab;
@@ -838,7 +833,7 @@ p {
 }
 
 .experience .timeline .timeline-item::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
@@ -855,7 +850,7 @@ p {
 }
 
 .experience .timeline .timeline-item::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 0;
@@ -898,7 +893,7 @@ p {
   background: #ffffff;
   position: relative;
   border-right: 5px solid #dddddd;
-  box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
 }
 
 .experience .timeline .timeline-item.right .timeline-text {
@@ -972,75 +967,118 @@ p {
 }
 
 /*Scroll bar to Change from exp to education*/
-.scroll {
-  scrollbar-color: grey transparent;
-  scrollbar-width: thin;
-  height: 72px;
-  /* length of one scroll */
-  overflow-y: auto;
-  width: 50px;
-  /* Length of one scroll*/
-  position: relative;
-  bottom: -70px;
-  left: 1100px;
-  z-index: 110;
-}
 
 .tab {
   position: relative;
   bottom: 0px;
-  left: 1160px;
+  top: 50px;
+  left: 1300px;
   z-index: 10;
-}
-
-.scroll::-webkit-scrollbar-button {
-  width: 100px;
-  height: 100px;
-}
-
-.scroll::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-.scroll::-webkit-scrollbar-track {
-  background-image: transparent;
-  border-radius: 10px;
-
 }
 
 .Slider {
   height: 0px;
 }
 
-.scroll::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(45deg, #379adb, #f504ed);
-  border-radius: 10px;
+.tablinks {
+  background-color: #379adb;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 120px;
 }
 
-.scroll-height {
-  height: 144px;
-  /* increase the height of scrollable area */
+.tablinks:hover {
+  background-color: #324468;
+  transform: translateY(-5px);
 }
 
 .Levi-kicking {
   position: relative;
-  bottom: 250px;
+  bottom: 220px;
   width: 300px;
   left: 250px;
   transition: transform 0.8s;
 }
 
-
 /*===========================
     5. Portfolio css 
 ===========================*/
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.cards-container {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease;
+}
+
+
+
+.card {
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-buttons {
+  display: grid;
+  grid-template-columns: 1 1 1 1 1 1; /* Create three columns: one flexible, one auto (for the buttons), and another flexible */
+  align-items: center; /* Vertically align the buttons */
+  width: 120%; /* Ensure the container takes up the full width of the parent */
+}
+
+
+.portfolio-buttons button {
+  padding: 15px 25px; /* Larger button size */
+  background-color: #324468;
+  color: white;
+  border: none;
+  border-radius: 25px; /* Rounded edges */
+  font-size: 18px;
+}
+
+#previous-btn {
+  grid-column: 1; /* Position the "Previous" button in the first column */
+}
+
+#next-btn {
+  grid-column: 3; /* Position the "Next" button in the third column */
+}
+
+.portfolio-buttons button:hover {
+  background-color: #324468;
+  transform: scale(1.1);
+}
+
+
 :root {
   --surface-color: #fff;
   --curve: 40;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .cards {
+  margin-bottom: 20px;
   display: grid;
   width: 300px;
   height: 350px;
@@ -1050,15 +1088,16 @@ p {
 .card_port {
   position: relative;
   display: block;
-  height: 100%;  
+  height: 100%;
   border-radius: calc(var(--curve) * 1px);
   overflow: hidden;
   text-decoration: none;
 }
-  
-.card_image {      
+
+.card_image {
   width: 100%;
-  height: auto;
+  height: 100%; /* Ensure the image fills the height of the container */
+  object-fit: cover;
 }
 
 .card_overlay {
@@ -1066,11 +1105,11 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;      
-  border-radius: calc(var(--curve) * 1px);    
-  background-color: var(--surface-color);      
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
   transform: translateY(100%);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .card_port:hover .card_overlay {
@@ -1081,12 +1120,13 @@ p {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 2em;
-  padding: 2em;
-  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  gap: 1.5em;
+  padding: 1.5em;
+  border-radius: calc(var(--curve) * 1.5px) 0 0 0;
   background-color: var(--surface-color);
+
   transform: translateY(-100%);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .card_arc {
@@ -1094,14 +1134,14 @@ p {
   height: 80px;
   position: absolute;
   bottom: 100%;
-  right: 0;      
+  right: 0;
   z-index: 1;
 }
 
 .card_arc path {
   fill: var(--surface-color);
   d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
-}       
+}
 
 .card_port:hover .card_header {
   transform: translateY(0);
@@ -1110,39 +1150,36 @@ p {
 .card_thumb {
   flex-shrink: 0;
   width: 50px;
-  height: 50px;      
-  border-radius: 50%;      
+  height: 50px;
+  border-radius: 50%;
 }
 
 .card_title {
   font-size: 1em;
-  margin: 0 0 .3em;
-  color: #6A515E;
+  margin: 0 0 0.3em;
+  color: #6a515e;
 }
 
 .card_tagline {
   display: block;
   margin: 1em 0;
-  font-family: "MockFlowFont";  
-  font-size: .8em; 
-  color: #D7BDCA;  
+  font-family: "MockFlowFont";
+  font-size: 0.8em;
+  color: #d7bdca;
 }
 
 .card_status {
-  font-size: .8em;
-  color: #D7BDCA;
+  font-size: 0.8em;
+  color: #000000;
 }
 
 .card_description {
   padding: 0 2em 2em;
   margin: 0;
-  color: #D7BDCA;
-  font-family: "MockFlowFont";   
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  color: #000000;
   overflow: hidden;
-}    
+  line-height: 1.5;
+}
 
 .portfolio {
   position: relative;
@@ -1202,13 +1239,12 @@ p {
   height: 100%;
   object-fit: cover;
   transform: scale(1.1);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .portfolio .portfolio-item:hover img {
   margin-left: 15px;
 }
-
 
 .portfolio .portfolio-text {
   position: relative;
@@ -1219,7 +1255,7 @@ p {
   text-align: center;
   align-items: center;
   background: #ffffff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio .portfolio-text h3 {
@@ -1249,7 +1285,6 @@ p {
   border-color: #2364ef;
 }
 
-
 /*===========================
     6. Blog css 
 ===========================*/
@@ -1266,13 +1301,11 @@ p {
 }
 
 .card {
-
   width: 300px;
   height: 500px;
   margin: 10px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-
 }
 
 .card:hover .card__caption {
@@ -1289,7 +1322,7 @@ p {
 }
 
 .card:hover .card__snippet {
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
 .card__thumb {
@@ -1297,8 +1330,6 @@ p {
   max-height: 500px;
   overflow: hidden;
 }
-
-
 
 .card__thumb::after {
   content: "";
@@ -1318,7 +1349,11 @@ p {
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
   transition: 0.3s;
 }
 
@@ -1329,6 +1364,9 @@ p {
 }
 
 .card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container */
   transition: 0.5s ease-in-out;
 }
 
@@ -1361,13 +1399,13 @@ p {
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  color: rgb(255, 255, 255)
+  color: rgb(255, 255, 255);
 }
 
 .card__snippet {
   display: -webkit-box;
-  max-height: 150px;
-  margin: 20px 0;
+  max-height: 160px;
+  margin: 25px 0;
   overflow: hidden;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -1401,7 +1439,6 @@ p {
   color: black;
   background-color: white;
 }
-
 /*===========================
     7. Contact css 
 ===========================*/
@@ -1423,11 +1460,11 @@ p {
 }
 
 .social-btns .btn.spotify:before {
-  background-color: #1DB954;
+  background-color: #1db954;
 }
 
 .social-btns .btn.spotify .fa {
-  color: #1DB954;
+  color: #1db954;
   position: relative;
   bottom: 30%;
 }
@@ -1508,7 +1545,7 @@ p {
 }
 
 .social-btns .btn:before {
-  content: '';
+  content: "";
   width: 120%;
   height: 120%;
   position: absolute;
@@ -1519,7 +1556,6 @@ p {
   font-size: 38px;
   vertical-align: middle;
 }
-
 
 .Flex-box {
   display: flex;
@@ -1587,8 +1623,6 @@ p {
     margin: 0 7px;
   }
 }
-
-
 
 @media (max-width: 767px) {
   .footer-content ul li a {

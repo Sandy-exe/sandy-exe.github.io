@@ -16,21 +16,14 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
     <!--====== Title ======-->
     <title>Unfold - Personal Portfolio </title>
-
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!--====== Line Icons css ======-->
-    <link rel="stylesheet" href="assets/css/LineIcons.css">
-
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
@@ -87,16 +80,16 @@
                     </div> <!-- header shape -->
                 </div>
 
-
                 <div class="row align-items-center">
                     <div class="col-xl-5 col-lg-6">
                         <div class="header-content-right">
                             <h4 class="sub-title">Hello, I’m</h4>
                             <h1 class="title">Santhosh Kumar S</h1>
                             <p>Machine Learning Engineer and <br> App Developer</p>
-                            <a class="main-btn" href="#work">View my Work</a>
+                            <a class="main-btn" href="https://github.com/Sandy-exe" target="_blank">View my Work</a>
                         </div> <!-- header content right -->
                     </div>
+
                     <div class="col-lg-6 offset-xl-1">
                         <div class="header-image d-none d-lg-block">
                             <img src="assets/images/Home/hero.png" alt="hero">
@@ -137,7 +130,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-content">
-                        <div class="about-header text-left">
+                        <div class="about-header">
                             <div class="about-me ">
                                 <p>Learn About Me</p>
                                 <h2>ML Engineer</h2>
@@ -148,11 +141,11 @@
                         </div>
                         <div class="about-text">
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hey, I'm Santhosh Kumar S, your friendly
-                                neighborhood Computer Science enthusiast on an adventurous quest for knowledge.
-                                From dabbling in app and web wizardry to taking a nosedive into the enchanting worlds of
-                                AI, ML, and Robotics, I've been
-                                riding the tech rollercoaster like a digital daredevil.
+                                Hey, I'm Santhosh Kumar S, a Computer Science enthusiast with a passion for exploring
+                                new technologies. Whether it's
+                                developing apps and websites or diving into AI, ML, and Robotics, I'm always looking for
+                                the next challenge in the tech
+                                world.
                             </p>
                         </div>
                         <div class="skills">
@@ -170,13 +163,7 @@
                             <div class="progress">
                                 <div class="progress-bar" style="width: 85%;"></div>
                             </div>
-                            <div class="skill-name">
-                                <p>Deep Learning</p>
-                                <p>95%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 95%;"></div>
-                            </div>
+
                             <div class="skill-name">
                                 <p>Full Stack (Django)</p>
                                 <p>90%</p>
@@ -192,7 +179,9 @@
                                 <div class="progress-bar" style="width: 95%;"></div>
                             </div>
                         </div>
-                        <a class="main-btn" href="">Learn More</a>
+                        <a target="_blank" class="main-btn"
+                            href="https://drive.google.com/file/d/10hTvZcTPmWgn9DzPxLtz-8f1GAFkyQ-G/view?usp=sharing">View
+                            My Resume</a>
                     </div>
                 </div>
             </div>
@@ -203,22 +192,20 @@
 <!--====== ABOUT PART ENDS ======-->
 
 
-<!--SLIDER-->
-<div class="Slider">
-    <div id="scroll" class="scroll" onscroll="Clicker()">
-        <div id="SS" class="scroll-height"></div>
-    </div>
-    <div class="tab">
-        <div id="Exp-Tab" class="tablinks" onclick="change(event, 'Experience')">Experience</div>
-        <div style="height: 15px;"></div>
-        <div id="Edu-Tab" class="tablinks" onclick="change(event, 'Education')">Education </div>
-    </div>
-    <div class="Levi-kicking" style="z-index: 10;">
-        <img src="assets/images/Extra_anime/Levi_kicking.png">
-    </div>
-</div>
+
 <!-- Experience Start -->
 <section id="Experience-section" class="Experience-class">
+    <!--SLIDER-->
+    <div class="Slider">
+        <div class="tab">
+            <div id="Exp-Tab" class="tablinks" onclick="change(event, 'Experience')">Experience</div>
+            <div style="height: 15px;"></div>
+            <div id="Edu-Tab" class="tablinks" onclick="change(event, 'Education')">Education </div>
+        </div>
+        <div class="Levi-kicking" style="z-index: 10;">
+            <img src="assets/images/Extra_anime/Levi_kicking.png">
+        </div>
+    </div>
     <!--Experience-->
     <div class="experience" id="Experience">
         <div class="container">
@@ -227,32 +214,37 @@
                 <h1>Working Experience</h1>
             </header>
             <div class="timeline">
+                <!-- NUS Deep Learning Intern on the left -->
                 <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
                     <div class="timeline-text">
-                        <div class="timeline-date">01/2023 - 03/2023</div>
-                        <h2>Management Team Member</h2>
-                        <h4>Zero Bugs Club, VIT Chennai, India</h4>
+                        <div class="timeline-date">12/2023 - 01/2024</div>
+                        <h2>NUS Deep Learning Intern</h2>
+                        <h4>National University of Singapore (NUS), Singapore</h4>
                         <p>
-                            Successfully Managed the "Krypthon", a 3-day hackathon, overseeing two time slots Including
-                            a 10-hour overnight slot.
+                            Worked on a project to improve deep learning models for computer vision, focusing on data
+                            augmentation and model optimization.
                         </p>
                     </div>
                 </div>
+
+                <!-- Armsoftech.AIR on the right -->
                 <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
                     <div class="timeline-text">
-                        <div class="timeline-date">03/2023 - Present </div>
-                        <h2>Technical Team Lead</h2>
-                        <h4>Zero Bugs Club, VIT Chennai, India</h4>
+                        <div class="timeline-date">08/2023 - 10/2023</div>
+                        <h2>Data Analytics Intern</h2>
+                        <h4>Armsoftech.AIR, Chennai, India</h4>
                         <p>
-                            Developed Questions for a debug round of "Tech Trivia Reboot" and Crafted a Challenging
-                            problem statement
-                            for the final Round which remained unsolved.
+                            Developed an interactive website with a custom dashboard integrating PowerBI, improving data
+                            handling and
+                            analysis with Excel macros and MySQL, resulting in more efficient data processing.
                         </p>
                     </div>
                 </div>
+
+                <!-- Dreadnought Robotics on the left -->
                 <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
                     <div class="timeline-text">
-                        <div class="timeline-date">04/2023 - Present</div>
+                        <div class="timeline-date">04/2023 - 04/2025</div>
                         <h2>Programming Department Member</h2>
                         <h4>Dreadnought Robotics, VIT Chennai, India</h4>
                         <p>
@@ -260,14 +252,17 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Zero Bugs Club on the right -->
                 <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
                     <div class="timeline-text">
-                        <div class="timeline-date">08/2023 - 10/2023 </div>
-                        <h2>Data Analytics Intern</h2>
-                        <h4>Armsoftech.AIR, Chennai, India </h4>
+                        <div class="timeline-date">01/2023 - 03/2024</div>
+                        <h2>Technical Team Member</h2>
+                        <h4>Zero Bugs Club, VIT Chennai, India</h4>
                         <p>
-                            Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit
-                            semper pretium.
+                            Developed Questions for a debug round of "Tech Trivia Reboot" and Crafted a Challenging
+                            problem
+                            statement for the final Round which remained unsolved.
                         </p>
                     </div>
                 </div>
@@ -319,11 +314,11 @@
                 </div>
                 <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
                     <div class="timeline-text">
-                        <div class="timeline-date">12/2023 - 01/2024 </div>
-                        <h2>Data Analytics using Deep Learning</h2>
-                        <h4>National University of Singapore, Singapore.</h4>
+                        <div class="timeline-date">02/2005 - 01/2006 </div>
+                        <h2>Pre Kinder-Garten</h2>
+                        <h4>Vidya Mandir Matriculation school, Tambaram, TamilNadu</h4>
                         <p>
-                            Data Analytics using Deep learning.
+                            Pre Kinder-Garten Stuff
                         </p>
                     </div>
                 </div>
@@ -334,145 +329,331 @@
 
 <!-- Portfolio Start -->
 <section id="portfolio" class="Portfolio">
+
     <div class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s" style="margin-bottom: 30px;">
                 <p>My Portfolio</p>
                 <h1>My Portfolio</h1>
             </div>
-
             <div class="row">
                 <div class="col-12">
                     <ul id="portfolio-filter">
                         <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-1">Web Apps</li>
-                        <li data-filter=".filter-2">Mobile Apps</li>
-                        <li data-filter=".filter-3">Machine Learning</li>
-                        <li data-filter=".filter-3">Deep Learning</li>
+                        <li data-filter=".filter-1">Mobile Apps</li>
+                        <li data-filter=".filter-2">Machine Learning/AI</li>
+                        <li data-filter=".filter-3">Web Apps</li>
+                        <li data-filter=".filter-4">Acheivements</li>
+                        <li data-filter=".filter-5">Certifications</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 col-sm-12 cards">
-                    <a href="" class="card_port">
-                        <img src="assets/images/Card_images/Random1.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/Random2_pro.png" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">kim Cattrall</h3>
-                                    <span class="card_status">3 hours ago</span>
-                                </div>
-                            </div>
-                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                                blanditiis?</p>
-                        </div>
-                    </a>
-                </div>
+            <!-- <div class="Navigator-container">-->
+                <div class="portfolio-buttons">
+                    <button style="display: none;" id="previous-btn" onclick="showPreviousPortfolio()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button style="display: none;" id="next-btn" onclick="showNextPortfolio()">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div> 
 
-                <div class="col-lg-4 col-md-6 col-sm-12 cards">
-                    <a href="" class="card_port">
-                        <img src="assets/images/Card_images/Random1.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/Random2_pro.png" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">kim Cattrall</h3>
-                                    <span class="card_status">3 hours ago</span>
-                                </div>
-                            </div>
-                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                                blanditiis?</p>
-                        </div>
-                    </a>
-                </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 cards">
-                    <a href="" class="card_port">
-                        <img src="assets/images/Card_images/Random1.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/Random2_pro.png" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">kim Cattrall</h3>
-                                    <span class="card_status">3 hours ago</span>
-                                </div>
-                            </div>
-                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                                blanditiis?</p>
-                        </div>
-                    </a>
-                </div>
+                <div id="portfolio-container" class="row portfolio-container">
 
-                <div class="col-lg-4 col-md-6 col-sm-12 cards">
-                    <a href="" class="card_port">
-                        <img src="assets/images/Card_images/Random1.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/Random2_pro.png" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">kim Cattrall</h3>
-                                    <span class="card_status">3 hours ago</span>
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-2">
+                        <a href="https://github.com/Sandy-exe/NUS_Project_SpeakRite" class="card_port" target="_blank">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">Speak-Rite</h3>
+                                        <span class="card_status">Machine Learning/AI</span>
+                                    </div>
                                 </div>
+                                <p class="card_description">SpeakRite is an ASR project using Whisper for
+                                    speech-to-text,
+                                    error correction, and GTTS for real-time pronunciation
+                                    feedback.</p>
                             </div>
-                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                                blanditiis?</p>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 cards">
-                    <a href="" class="card_port">
-                        <img src="assets/images/Card_images/Random1.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/Random2_pro.png" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">kim Cattrall</h3>
-                                    <span class="card_status">3 hours ago</span>
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-1">
+                        <a href="https://github.com/Sandy-exe/Google-Sheet-Mysql-Sync" class="card_port"
+                            target="_blank">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">Google Sheet Sync</h3>
+                                        <span class="card_status">App Dev</span>
+                                    </div>
                                 </div>
+                                <p class="card_description">This Flutter app integrates MySQL via Django for CRUD
+                                    operations, real-time Google Sheets sync, and "Last Write Wins"
+                                    conflict resolution.</p>
                             </div>
-                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                                blanditiis?</p>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 cards">
-                    <a href="" class="card_port">
-                        <img src="assets/images/Card_images/Random1.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <img class="card_thumb" src="assets/images/Card_images/Random2_pro.png" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">kim Cattrall</h3>
-                                    <span class="card_status">3 hours ago</span>
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-3">
+                        <a href="https://github.com/Sandy-exe/DPBH_Hackathon_Main" class="card_port" target="_blank">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">Guard’s Eye</h3>
+                                        <span class="card_status">Web Dev</span>
+                                    </div>
                                 </div>
+                                <p class="card_description">Guard’s Eye is a browser extension using machine learning
+                                    and image recognition to combat deceptive e-commerce practices
+                                    like fake reviews.</p>
                             </div>
-                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                                blanditiis?</p>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-3">
+                        <a href="https://github.com/Sandy-exe/Dashboard_Website_Internship" class="card_port"
+                            target="_blank">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">Armsoftech.AIR's Client DashBoard</h3>
+                                        <span class="card_status">Web Dev</span>
+                                    </div>
+                                </div>
+                                <p class="card_description">At Armsoftech, I crafted a dynamic Django-based dashboard
+                                    for client access during my internship.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-1">
+                        <a href="https://github.com/Sandy-exe/Bucket-List" class="card_port" target="_blank">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">Bucket List</h3>
+                                        <span class="card_status">App Dev</span>
+                                    </div>
+                                </div>
+                                <p class="card_description">I developed a Todo-App using Flutter for the user interface
+                                    and Firebase Firestore for data storage.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-3">
+                        <a href="https://github.com/Sandy-exe/ZB-Mart" class="card_port" target="_blank">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">ZB Mart</h3>
+                                        <span class="card_status">Web Dev</span>
+                                    </div>
+                                </div>
+                                <p class="card_description">ZB Mart, an e-commerce platform for ZBC at VITC, utilizes
+                                    Django for efficient product management and user
+                                    authentication.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-2 hidden">
+                        <a href="https://github.com/Sandy-exe/Talk2See" class="card_port" target="_blank">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">Talk2See</h3>
+                                        <span class="card_status">Machine Learning/AI</span>
+                                    </div>
+                                </div>
+                                <p class="card_description">Talk2See is a real-time assistive tool for visually impaired
+                                    individuals.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-2 hidden">
+                        <a href="https://github.com/Sandy-exe/GYM_Pose_Estimation" class="card_port" target="_blank">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">Gym-Pose-Estimation</h3>
+                                        <span class="card_status">Machine Learning/AI</span>
+                                    </div>
+                                </div>
+                                <p class="card_description">An AI-driven system for assessing injury risks during gym
+                                    workouts.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-1 hidden">
+                        <a href="https://github.com/Sandy-exe/E-NaVIT-Event-Navigation-VIT" class="card_port target="
+                            _blank"">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">E-NaVIT<br>Event-Navigation-VIT</h3>
+                                        <span class="card_status">App Dev</span>
+                                    </div>
+                                </div>
+                                <p class="card_description">
+                                    The ENAVIT app is a cross-platform event management tool for Vellore Institute of
+                                    Technology, Chennai.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-4 hidden">
+                        <a href="https://www.linkedin.com/posts/santhosh-kumar-santhanam_darkpatterns-transparency-hackathonfinals-activity-7199670814168764416-j9jL?utm_source=share&utm_medium=member_desktop"
+                            target="_blank" class="card_port">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">DBPH Finalist</h3>
+                                        <span class="card_status">Acheivement</span>
+                                    </div>
+                                </div>
+                                <p class="card_description">
+                                    Participated in the grand finale of the Dark Patterns Buster Hackathon hosted by the
+                                    Department of Consumer Affairs,
+                                    Government of India, at IIT BHU in Varanasi.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-5 hidden">
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/C648NLEEJGAJ"
+                            target="_blank" class="card_port">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">Google Data Analytics Specialization</h3>
+                                        <span class="card_status">Certification</span>
+                                    </div>
+                                </div>
+                                <p class="card_description">
+                                    I completed the Google Data Analytics Specialization, where I learned the key data
+                                    analytics steps: ask, prepare,
+                                    process, analyze, act, and share.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-5 hidden">
+                        <a href="https://www.linkedin.com/posts/activity-7166107298526937088-ewtr?utm_source=share&utm_medium=member_desktop"
+                            target="_blank" class="card_port">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">TensorFlow Developer Certificate</h3>
+                                        <span class="card_status">Certification</span>
+                                    </div>
+                                </div>
+                                <p class="card_description">
+                                    Successfully earned the TensorFlow Developer Certification, advancing my learning in
+                                    coding for CNNs, LSTMs, and time
+                                    series concepts.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-5 hidden">
+                        <a href="https://drive.google.com/file/d/14gJ7V9LHmnDaHgiSSPE5jJeGjJkSXvap/view?usp=sharing"
+                            target="_blank" class="card_port">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">AWS Model Deployment Training </h3>
+                                        <span class="card_status">Certification</span>
+                                    </div>
+                                </div>
+                                <p class="card_description">
+                                    Learned About ML model Deployment using services like SageMaker, S3, Glue, ECR,
+                                    StepFunctions and Lambda.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <div class="portfolio-buttons">
+                    
+                </div>
+<!-- 
+            </div> -->
         </div>
     </div>
+
 </section>
 
 <section id="blog-section" class="Blog-section">
@@ -489,51 +670,19 @@
             <div class="card-container">
                 <div class="card">
                     <div class="card__thumb">
-                        <img src="https://source.unsplash.com/3THn0EN_Ydo/300x510" alt="Picture by David Monje"
-                            class="card__image">
+                        <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
                         <div class="card__caption">
-                            <h2 class="card__title">NASA Has Found Hundreds Of Potential New Planets</h2>
+                            <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
 
-                            <p class="card__snippet">NASA released a list of 219 new “planet candidates” discovered by
-                                the Kepler
-                                space telescope, 10 of which are similar to Earth’s size and may be habitable by other
-                                life forms.
+                            <p class="card__snippet">
+                                There’s a quote from Arcane that really resonates with me:
+                                <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
+                                    smartest. No. It comes to those who
+                                    will do anything to achieve it.”</i>
                             </p>
-                            <a href="" class="card__button">Read more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card__thumb">
-                        <img src="https://source.unsplash.com/71u2fOofI-U/300x510" alt="Picture by David Monje"
-                            class="card__image">
-                        <div class="card__caption">
-                            <h2 class="card__title">NASA Has Found Hundreds Of Potential New Planets</h2>
-
-                            <p class="card__snippet">NASA released a list of 219 new “planet candidates” discovered by
-                                the Kepler
-                                space telescope, 10 of which are similar to Earth’s size and may be habitable by other
-                                life forms.
-                            </p>
-                            <a href="" class="card__button">Read more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card__thumb">
-                        <img src="https://source.unsplash.com/qXMpNtNp1uE/300x510" alt="Picture by David Monje"
-                            class="card__image">
-                        <div class="card__caption">
-                            <h2 class="card__title">NASA Has Found Hundreds Of Potential New Planets</h2>
-
-                            <p class="card__snippet">NASA released a list of 219 new “planet candidates” discovered by
-                                the Kepler
-                                space telescope, 10 of which are similar to Earth’s size and may be habitable by other
-                                life forms.
-                            </p>
-                            <a href="" class="card__button">Read more</a>
+                            <a target="_blank"
+                                href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
+                                class="card__button">Read more</a>
                         </div>
                     </div>
                 </div>
@@ -681,17 +830,13 @@
 
 
 <body>
-    <!--====== jquery js ======-->
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
 
-    <!--====== Parallax js ======-->
-    <script src="assets/js/parallax.min.js"></script>
 
     <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
+    <!-- <script src="assets/js/main.js"></script> -->
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -700,13 +845,18 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <!--====== Parallax js ======-->
+    <script src="assets/js/parallax.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <script src="assets/js/Main1.js"></script>
+
+    <!--====== jquery js ======-->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/2273efbdec.js" crossorigin="anonymous"></script>
 </body>
 
