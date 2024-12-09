@@ -197,8 +197,8 @@ p {
   transition: all 0.4s ease-out 0s;
 }
 
-.navigation.sticky {
-  padding: 2px ;
+.navigation.sticky {  padding: 2px ;
+  position: fixed;
   -webkit-transition: all 0.4s ease-out 0s;
   -moz-transition: all 0.4s ease-out 0s;
   -ms-transition: all 0.4s ease-out 0s;
@@ -275,7 +275,7 @@ p {
 /* Overlay for mobile */
 .overlay {
     display: none;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     right: 0;
@@ -1109,14 +1109,10 @@ body {
   align-items: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 .portfolio-buttons {
-  display: grid;
-  grid-template-columns: 1 1 1 1 1 1; /* Create three columns: one flexible, one auto (for the buttons), and another flexible */
-  align-items: center; /* Vertically align the buttons */
-  width: 120%; /* Ensure the container takes up the full width of the parent */
+  position: relative; /* Position the buttons relative to the container */
+  width: 100%; /* Ensure the container takes up full width */
 }
-
 
 .portfolio-buttons button {
   padding: 15px 25px; /* Larger button size */
@@ -1125,19 +1121,72 @@ body {
   border: none;
   border-radius: 25px; /* Rounded edges */
   font-size: 18px;
+  position: absolute; /* Position the buttons absolutely inside the container */
+  top: 50%; /* Center buttons vertically */
+  transform: translateY(-50%); /* Adjust to perfectly center vertically */
+  z-index: 10; /* Make sure buttons are above other content */
 }
 
+/* Positioning for large screens */
 #previous-btn {
-  grid-column: 1; /* Position the "Previous" button in the first column */
+  top: 250px;
+  left: 100px; /* Move closer to the left edge */
 }
 
 #next-btn {
-  grid-column: 3; /* Position the "Next" button in the third column */
+  top: 250px;
+  right: 100px; /* Move closer to the right edge */
 }
 
+/* Hover effect */
 .portfolio-buttons button:hover {
-  background-color: #324468;
-  transform: scale(1.1);
+  background-color: #2a3d56; /* Slightly darker shade on hover */
+}
+
+/* Media Queries for responsive design */
+
+/* Medium screens (Tablets and below) */
+@media (max-width: 992px) {
+  .portfolio-buttons button {
+    padding: 12px 20px; /* Adjust button size */
+    font-size: 16px; /* Slightly smaller font */
+  }
+
+  #previous-btn, #next-btn {
+    top: 45%; /* Adjust the vertical position slightly */
+  }
+}
+
+/* Small screens (Mobile Portrait) */
+@media (max-width: 768px) {
+  .portfolio-buttons button {
+    padding: 10px 15px; /* Smaller button size */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  #previous-btn, #next-btn {
+    top: 40%; /* Adjust button vertical positioning */
+  }
+}
+
+/* Extra small screens (Mobile Landscape) */
+@media (max-width: 480px) {
+  .portfolio-buttons button {
+    padding: 8px 12px; /* Even smaller button size */
+    font-size: 12px; /* Even smaller font size */
+  }
+
+  #previous-btn, #next-btn {
+    top: 35%; /* Further adjust vertical position */
+  }
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
 }
 
 
