@@ -18,7 +18,7 @@
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
     <!-- Template Stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -29,41 +29,84 @@
 
 <section id="home-section" class="home-section" style="padding-bottom:  45px;">
     <header id="home" class="header-area">
-        <div class="navigation fixed-top">
+        <div class="navigation">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
+                        <nav class="navbar ">
                             <a class="navbar-brand" href="index.html">
                                 <img src="assets/images/Extra_anime/Gojo2.png" alt="Logo" style="width: 100px;">
-                            </a> <!-- Logo -->
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
+                            </a>
+                            <button class="navbar-toggler" onclick="toggleSidebar()">
+                                <img src="assets/images/Card_images/icons8-menu-30.png" alt="Menu Icon" style="width: 24px; height: 24px;">
                             </button>
+                            <ul class="navbar-nav ml-auto d-none d-lg-flex">
+                                <li class="nav-item active"><a class="page-scroll" href="#home">Home</a></li>
+                                <li class="nav-item"><a class="page-scroll" href="#about">About</a></li>
+                                <li class="nav-item"><a class="page-scroll" href="#experience">Experience</a></li>
+                                <li class="nav-item"><a class="page-scroll" href="#portfolio">Portfolio</a></li>
+                                <li class="nav-item"><a class="page-scroll" href="#blog">Blog</a></li>
+                                <li class="nav-item"><a class="page-scroll" href="#contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <!-- Sidebar -->
+                        <div class="flex flex-col items-center w-40 h-full overflow-hidden text-gray-700 bg-gray-100 rounded" id="sidebar">
+                        <button class="text-gray-700 absolute top-3 right-3" onclick="toggleSidebar()"><img class="h-5 w-5" src="assets/images/Card_images/close.png"></button>
+                        <div class="flex items-center justify-between w-full p-3">
+                                <img class="w-40 h-30 top-40" src="assets/images/Extra_anime/Gojo2.png" alt="Logo" style="">    
+                            </div>
+                            
+                            <ul class="sidebar-nav w-full flex flex-col items-center mt-4">
+                                <li class="w-full">
+                                    <a class="flex items-center w-full h-12 px-3 rounded hover:bg-gray-300" href="#home">
+                                        <img class="w-4 h-4" src="assets/images/Card_images/home-icon.svg" alt="Home Icon">
+                                        <span class="ml-2 text-sm font-medium">Home</span>
+                                    </a>
+                                </li>
+                                <li class="w-full">
+                                    <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#about">
+                                        <img class="w-6 h-6" src="assets/images/Card_images/about-icon.svg" alt="About Icon">
+                                        <span class="ml-2 text-sm  text-[#4A4A4A] font-medium">About</span>
+                                    </a>
+                                </li>
+                                <li class="w-full">
+                                    <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#experience">
+                                        <img class="w-6 h-6" src="assets/images/Card_images/experience-icon.png" alt="Experience Icon">
+                                        <span class="ml-2 text-sm font-medium">Experience</span>
+                                    </a>
+                                </li>
+                                <li class="w-full">
+                                    <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#portfolio">
+                                        <img class="w-6 h-6" src="assets/images/Card_images/portfolio-icon.png" alt="Portfolio Icon">
+                                        <span class="ml-2 text-sm font-medium">Portfolio</span>
+                                    </a>
+                                </li>
+                                <li class="w-full">
+                                    <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#blog">
+                                        <img class="w-6 h-6" src="assets/images/Card_images/blog-icon.png" alt="Blog Icon">
+                                        <span class="ml-2 text-sm font-medium">Blog</span>
+                                    </a>
+                                </li>
+                                <li class="w-full">
+                                    <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#contact">
+                                        <img class="w-6 h-6" src="assets/images/Card_images/contact-icon.png" alt="Contact Icon">
+                                        <span class="ml-2 text-#324468 font-medium">Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
 
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item active"><a class="page-scroll" href="#home">Home</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#about">About</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#experience">Experience</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#portfolio">Portfolio</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#blog">Blog</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#contact">Contact</a></li>
-                                </ul>
-                            </div> <!-- navbar collapse -->
-                        </nav> <!-- navbar -->
+
+                        
+                        <!-- Overlay -->
+                        <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+                         <!-- navbar -->
                     </div>
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- navigation -->
 
         <div id="parallax" class="header-content d-flex align-items-center">
-
-
             <div class="container">
 
                 <div class="header-shape Denji layer" data-depth="0.20">
@@ -82,17 +125,26 @@
 
                 <div class="row align-items-center">
                     <div class="col-xl-5 col-lg-6">
+
                         <div class="header-content-right">
-                            <h4 class="sub-title">Hello, I’m</h4>
-                            <h1 class="title">Santhosh Kumar S</h1>
-                            <p>Machine Learning Engineer and <br> App Developer</p>
-                            <a class="main-btn" href="https://github.com/Sandy-exe" target="_blank">View my Work</a>
+                            <div class="hero-text">
+                                <h4 class="sub-title">Hello, I’m</h4>
+                                <h1 class="title">Santhosh Kumar S</h1>
+                                <h2></h2>
+
+                                <div class="typed-text" style="display: none;">ML Engineer, App Developer, Web Developer
+                                </div>
+                            </div>
+                            <br>
+                            <div class="main-btn1">
+                                <a class="main-btn" href="https://github.com/Sandy-exe" target="_blank">View my Work</a>
+                            </div>
                         </div> <!-- header content right -->
                     </div>
 
                     <div class="col-lg-6 offset-xl-1">
                         <div class="header-image d-none d-lg-block">
-                            <img src="assets/images/Home/hero.png" alt="hero">
+                            <img src="assets/images/Home/hero.png" style="padding-top:60px; " alt="hero">
                         </div> <!-- header image -->
                     </div>
                 </div> <!-- row -->
@@ -180,8 +232,7 @@
                             </div>
                         </div>
                         <a target="_blank" class="main-btn"
-                            href="https://drive.google.com/file/d/10hTvZcTPmWgn9DzPxLtz-8f1GAFkyQ-G/view?usp=sharing">View
-                            My Resume</a>
+                            href="https://drive.google.com/file/d/10hTvZcTPmWgn9DzPxLtz-8f1GAFkyQ-G/view?usp=sharing">View My Resume</a>
                     </div>
                 </div>
             </div>
@@ -194,20 +245,20 @@
 
 
 <!-- Experience Start -->
-<section id="Experience-section" class="Experience-class">
+<section id="experience-section" class="Experience-class">
     <!--SLIDER-->
     <div class="Slider">
         <div class="tab">
-            <div id="Exp-Tab" class="tablinks" onclick="change(event, 'Experience')">Experience</div>
+            <div id="Exp-Tab" class="tablinks active" onclick="change(event, 'experience')">Experience</div>
             <div style="height: 15px;"></div>
-            <div id="Edu-Tab" class="tablinks" onclick="change(event, 'Education')">Education </div>
+            <div id="Edu-Tab" class="tablinks" onclick="change(event, 'education')">Education</div>
         </div>
         <div class="Levi-kicking" style="z-index: 10;">
             <img src="assets/images/Extra_anime/Levi_kicking.png">
         </div>
     </div>
     <!--Experience-->
-    <div class="experience" id="Experience">
+    <div class="experience" id="experience" style="display: block;">
         <div class="container">
             <header id="section-header" class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                 <p>My Resume</p>
@@ -271,7 +322,7 @@
     </div>
 
     <!-- EDUCATION Section-->
-    <div id="Education" class="experience" style="display: none;">
+    <div id="education" class="experience" style="display: none;">
         <div class="container">
             <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                 <p>My Resume</p>
@@ -350,306 +401,306 @@
             </div>
 
             <!-- <div class="Navigator-container">-->
-                <div class="portfolio-buttons">
-                    <button style="display: none;" id="previous-btn" onclick="showPreviousPortfolio()">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button style="display: none;" id="next-btn" onclick="showNextPortfolio()">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div> 
+            <div class="portfolio-buttons">
+                <button style="display: none;" id="previous-btn" onclick="showPreviousPortfolio()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button style="display: none;" id="next-btn" onclick="showNextPortfolio()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
 
 
-                <div id="portfolio-container" class="row portfolio-container">
+            <div id="portfolio-container" class="row portfolio-container">
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-2">
-                        <a href="https://github.com/Sandy-exe/NUS_Project_SpeakRite" class="card_port" target="_blank">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">Speak-Rite</h3>
-                                        <span class="card_status">Machine Learning/AI</span>
-                                    </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 cards portfolio-item filter-2 wow fadeInUp"
+                    data-wow-delay="0.0s">
+                    <a href="https://github.com/Sandy-exe/NUS_Project_SpeakRite" class="card_port" target="_blank">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">Speak-Rite</h3>
+                                    <span class="card_status">Machine Learning/AI</span>
                                 </div>
-                                <p class="card_description">SpeakRite is an ASR project using Whisper for
-                                    speech-to-text,
-                                    error correction, and GTTS for real-time pronunciation
-                                    feedback.</p>
                             </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-1">
-                        <a href="https://github.com/Sandy-exe/Google-Sheet-Mysql-Sync" class="card_port"
-                            target="_blank">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">Google Sheet Sync</h3>
-                                        <span class="card_status">App Dev</span>
-                                    </div>
-                                </div>
-                                <p class="card_description">This Flutter app integrates MySQL via Django for CRUD
-                                    operations, real-time Google Sheets sync, and "Last Write Wins"
-                                    conflict resolution.</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-3">
-                        <a href="https://github.com/Sandy-exe/DPBH_Hackathon_Main" class="card_port" target="_blank">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">Guard’s Eye</h3>
-                                        <span class="card_status">Web Dev</span>
-                                    </div>
-                                </div>
-                                <p class="card_description">Guard’s Eye is a browser extension using machine learning
-                                    and image recognition to combat deceptive e-commerce practices
-                                    like fake reviews.</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-3">
-                        <a href="https://github.com/Sandy-exe/Dashboard_Website_Internship" class="card_port"
-                            target="_blank">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">Armsoftech.AIR's Client DashBoard</h3>
-                                        <span class="card_status">Web Dev</span>
-                                    </div>
-                                </div>
-                                <p class="card_description">At Armsoftech, I crafted a dynamic Django-based dashboard
-                                    for client access during my internship.</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-1">
-                        <a href="https://github.com/Sandy-exe/Bucket-List" class="card_port" target="_blank">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">Bucket List</h3>
-                                        <span class="card_status">App Dev</span>
-                                    </div>
-                                </div>
-                                <p class="card_description">I developed a Todo-App using Flutter for the user interface
-                                    and Firebase Firestore for data storage.</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-3">
-                        <a href="https://github.com/Sandy-exe/ZB-Mart" class="card_port" target="_blank">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">ZB Mart</h3>
-                                        <span class="card_status">Web Dev</span>
-                                    </div>
-                                </div>
-                                <p class="card_description">ZB Mart, an e-commerce platform for ZBC at VITC, utilizes
-                                    Django for efficient product management and user
-                                    authentication.</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-2 hidden">
-                        <a href="https://github.com/Sandy-exe/Talk2See" class="card_port" target="_blank">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">Talk2See</h3>
-                                        <span class="card_status">Machine Learning/AI</span>
-                                    </div>
-                                </div>
-                                <p class="card_description">Talk2See is a real-time assistive tool for visually impaired
-                                    individuals.</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-2 hidden">
-                        <a href="https://github.com/Sandy-exe/GYM_Pose_Estimation" class="card_port" target="_blank">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">Gym-Pose-Estimation</h3>
-                                        <span class="card_status">Machine Learning/AI</span>
-                                    </div>
-                                </div>
-                                <p class="card_description">An AI-driven system for assessing injury risks during gym
-                                    workouts.</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-1 hidden">
-                        <a href="https://github.com/Sandy-exe/E-NaVIT-Event-Navigation-VIT" class="card_port target="
-                            _blank"">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">E-NaVIT<br>Event-Navigation-VIT</h3>
-                                        <span class="card_status">App Dev</span>
-                                    </div>
-                                </div>
-                                <p class="card_description">
-                                    The ENAVIT app is a cross-platform event management tool for Vellore Institute of
-                                    Technology, Chennai.</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-4 hidden">
-                        <a href="https://www.linkedin.com/posts/santhosh-kumar-santhanam_darkpatterns-transparency-hackathonfinals-activity-7199670814168764416-j9jL?utm_source=share&utm_medium=member_desktop"
-                            target="_blank" class="card_port">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">DBPH Finalist</h3>
-                                        <span class="card_status">Acheivement</span>
-                                    </div>
-                                </div>
-                                <p class="card_description">
-                                    Participated in the grand finale of the Dark Patterns Buster Hackathon hosted by the
-                                    Department of Consumer Affairs,
-                                    Government of India, at IIT BHU in Varanasi.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-5 hidden">
-                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/C648NLEEJGAJ"
-                            target="_blank" class="card_port">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">Google Data Analytics Specialization</h3>
-                                        <span class="card_status">Certification</span>
-                                    </div>
-                                </div>
-                                <p class="card_description">
-                                    I completed the Google Data Analytics Specialization, where I learned the key data
-                                    analytics steps: ask, prepare,
-                                    process, analyze, act, and share.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-5 hidden">
-                        <a href="https://www.linkedin.com/posts/activity-7166107298526937088-ewtr?utm_source=share&utm_medium=member_desktop"
-                            target="_blank" class="card_port">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">TensorFlow Developer Certificate</h3>
-                                        <span class="card_status">Certification</span>
-                                    </div>
-                                </div>
-                                <p class="card_description">
-                                    Successfully earned the TensorFlow Developer Certification, advancing my learning in
-                                    coding for CNNs, LSTMs, and time
-                                    series concepts.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards filter-5 hidden">
-                        <a href="https://drive.google.com/file/d/14gJ7V9LHmnDaHgiSSPE5jJeGjJkSXvap/view?usp=sharing"
-                            target="_blank" class="card_port">
-                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                            <div class="card_overlay">
-                                <div class="card_header">
-                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                    <div class="card_header-text">
-                                        <h3 class="card_title">AWS Model Deployment Training </h3>
-                                        <span class="card_status">Certification</span>
-                                    </div>
-                                </div>
-                                <p class="card_description">
-                                    Learned About ML model Deployment using services like SageMaker, S3, Glue, ECR,
-                                    StepFunctions and Lambda.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
+                            <p class="card_description">SpeakRite is an ASR project using Whisper for
+                                speech-to-text,
+                                error correction, and GTTS for real-time pronunciation
+                                feedback.</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="portfolio-buttons">
-                    
+
+                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://github.com/Sandy-exe/Google-Sheet-Mysql-Sync" class="card_port" target="_blank">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">Google Sheet Sync</h3>
+                                    <span class="card_status">App Dev</span>
+                                </div>
+                            </div>
+                            <p class="card_description">This Flutter app integrates MySQL via Django for CRUD
+                                operations, real-time Google Sheets sync, and "Last Write Wins"
+                                conflict resolution.</p>
+                        </div>
+                    </a>
                 </div>
-<!-- 
+
+                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://github.com/Sandy-exe/DPBH_Hackathon_Main" class="card_port" target="_blank">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">Guard’s Eye</h3>
+                                    <span class="card_status">Web Dev</span>
+                                </div>
+                            </div>
+                            <p class="card_description">Guard’s Eye is a browser extension using machine learning
+                                and image recognition to combat deceptive e-commerce practices
+                                like fake reviews.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://github.com/Sandy-exe/Dashboard_Website_Internship" class="card_port"
+                        target="_blank">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">Armsoftech.AIR's Client DashBoard</h3>
+                                    <span class="card_status">Web Dev</span>
+                                </div>
+                            </div>
+                            <p class="card_description">At Armsoftech, I crafted a dynamic Django-based dashboard
+                                for client access during my internship.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://github.com/Sandy-exe/Bucket-List" class="card_port" target="_blank">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">Bucket List</h3>
+                                    <span class="card_status">App Dev</span>
+                                </div>
+                            </div>
+                            <p class="card_description">I developed a Todo-App using Flutter for the user interface
+                                and Firebase Firestore for data storage.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://github.com/Sandy-exe/ZB-Mart" class="card_port" target="_blank">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">ZB Mart</h3>
+                                    <span class="card_status">Web Dev</span>
+                                </div>
+                            </div>
+                            <p class="card_description">ZB Mart, an e-commerce platform for ZBC at VITC, utilizes
+                                Django for efficient product management and user
+                                authentication.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-2 hidden wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://github.com/Sandy-exe/Talk2See" class="card_port" target="_blank">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">Talk2See</h3>
+                                    <span class="card_status">Machine Learning/AI</span>
+                                </div>
+                            </div>
+                            <p class="card_description">Talk2See is a real-time assistive tool for visually impaired
+                                individuals.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-2 hidden wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://github.com/Sandy-exe/GYM_Pose_Estimation" class="card_port" target="_blank">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">Gym-Pose-Estimation</h3>
+                                    <span class="card_status">Machine Learning/AI</span>
+                                </div>
+                            </div>
+                            <p class="card_description">An AI-driven system for assessing injury risks during gym
+                                workouts.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-1 hidden wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://github.com/Sandy-exe/E-NaVIT-Event-Navigation-VIT" class="card_port target="
+                        _blank"">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">E-NaVIT<br>Event-Navigation-VIT</h3>
+                                    <span class="card_status">App Dev</span>
+                                </div>
+                            </div>
+                            <p class="card_description">
+                                The ENAVIT app is a cross-platform event management tool for Vellore Institute of
+                                Technology, Chennai.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-4 hidden wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://www.linkedin.com/posts/santhosh-kumar-santhanam_darkpatterns-transparency-hackathonfinals-activity-7199670814168764416-j9jL?utm_source=share&utm_medium=member_desktop"
+                        target="_blank" class="card_port">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">DBPH Finalist</h3>
+                                    <span class="card_status">Acheivement</span>
+                                </div>
+                            </div>
+                            <p class="card_description">
+                                Participated in the grand finale of the Dark Patterns Buster Hackathon hosted by the
+                                Department of Consumer Affairs,
+                                Government of India, at IIT BHU in Varanasi.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-5 hidden wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/C648NLEEJGAJ"
+                        target="_blank" class="card_port">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">Google Data Analytics Specialization</h3>
+                                    <span class="card_status">Certification</span>
+                                </div>
+                            </div>
+                            <p class="card_description">
+                                I completed the Google Data Analytics Specialization, where I learned the key data
+                                analytics steps: ask, prepare,
+                                process, analyze, act, and share.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-5 hidden wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://www.linkedin.com/posts/activity-7166107298526937088-ewtr?utm_source=share&utm_medium=member_desktop"
+                        target="_blank" class="card_port">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">TensorFlow Developer Certificate</h3>
+                                    <span class="card_status">Certification</span>
+                                </div>
+                            </div>
+                            <p class="card_description">
+                                Successfully earned the TensorFlow Developer Certification, advancing my learning in
+                                coding for CNNs, LSTMs, and time
+                                series concepts.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-5 hidden wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://drive.google.com/file/d/14gJ7V9LHmnDaHgiSSPE5jJeGjJkSXvap/view?usp=sharing"
+                        target="_blank" class="card_port">
+                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                        <div class="card_overlay">
+                            <div class="card_header">
+                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                <div class="card_header-text">
+                                    <h3 class="card_title">AWS Model Deployment Training </h3>
+                                    <span class="card_status">Certification</span>
+                                </div>
+                            </div>
+                            <p class="card_description">
+                                Learned About ML model Deployment using services like SageMaker, S3, Glue, ECR,
+                                StepFunctions and Lambda.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-buttons">
+
+            </div>
+            <!-- 
             </div> -->
         </div>
     </div>
@@ -658,7 +709,7 @@
 
 <section id="blog-section" class="Blog-section">
     <!-- Blog Start -->
-    <div class="blog" id="blog">
+    <div class="blog" style="padding-top: 70px;" id="blog">
         <div class="container">
             <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s" style="padding-bottom: 30px;">
                 <p>From Blog</p>
@@ -668,7 +719,7 @@
                 rel="stylesheet">
 
             <div class="card-container">
-                <div class="card">
+                <div class="card wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card__thumb">
                         <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
                         <div class="card__caption">
@@ -694,93 +745,103 @@
 
 <!-- Contact Start -->
 <section id="Contact-section" class="Contact-section">
-    <div class="container py-5">
-        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s" style="padding-bottom: 30px;">
-            <p>It's a Me</p>
-            <h1>Contact</h1>
-        </div>
-        <div class="Flex-box">
-            <div class="Contact-card">
-                <div class="col-lg-12">
-                    <h1 class="col-lg-12 pt-5 mb-3" style="text-align: left;"><b
-                            style="font-size: 100px; color: #658eab">Let's</b> <span
-                            style="font-size: 40px;  position: relative; right: 12px; bottom: 5px;">Get</span> </h1>
-                    <h1 class="col-lg-12 " style="text-align: right;"> <span
-                            style="font-size: 50px; position: relative; top: -100px; left: 10px;">In </span><b
-                            style="font-size: 100px; color:#658eab; position: relative; top: -60px;"> Touch</b></h1>
-                </div>
-                <div class="col-lg-8" style="position: relative; top: -100px;">
-                    <div class="row g-10">
-                        <div class="col-lg-12">
-                            <p class=" mt-4 mb-2">Current Workplace</p>
-                            <h3 class="display-5 fw-bold">Chennai, Tamil Nadu, India.</h3>
-                            <hr style="border-top: 1px solid #ccc; width: 83%;">
-                        </div>
-                        <div class="col-lg-12 ">
-                            <p class="mb-2">Call me:</p>
-                            <h3 class="fw-bold">+91 9500882564</h3>
-                            <hr style="border-top: 1px solid #ccc; width: 83%;">
-                        </div>
-                        <div class="col-lg-12">
-                            <p class="mb-2">Mail me:</p>
-                            <h3 class="fw-bold">santhosh.kumars.engg@gmail.com</h3>
-                        </div>
-                    </div>
-                </div>
+    <div class="contact" id="contact">
+        <div class="container py-5">
+            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s" style="padding-bottom: 30px;">
+                <p>It's a Me</p>
+                <h1>Contact</h1>
             </div>
-
-            <div class="Form-card">
-                <div class="Form-control col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.5s"
-                    style="padding-top: 20px;">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6 pb-3">
-                                <div class="form-floating">
-                                    <label for="name">Your Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                </div>
+            <div class="Flex-box">
+                <div class="Contact-card wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-12">
+                        <h1 class="col-lg-12 pt-5 mb-3" style="text-align: left;">
+                            <b style="font-size: 100px; color: #658eab">Let's</b>
+                            <span style="font-size: 40px; position: relative; right: 12px; bottom: 5px;">Get</span>
+                        </h1>
+                        <h1 class="col-lg-12 wow fadeInRight" data-wow-delay="0.3s" style="text-align: right;">
+                            <span style="font-size: 50px; position: relative; top: -100px; left: 10px;">In </span>
+                            <b style="font-size: 100px; color:#658eab; position: relative; top: -60px;">Touch</b>
+                        </h1>
+                    </div>
+                    <div class="col-lg-8" style="position: relative; top: -100px;">
+                        <div class="row g-10">
+                            <div class="col-lg-12 wow fadeInLeft" data-wow-delay="0.4s">
+                                <p class="mt-4 mb-2">Current Workplace</p>
+                                <h3 class="display-5 fw-bold">Chennai, Tamil Nadu, India.</h3>
+                                <hr style="border-top: 1px solid #ccc; width: 83%;">
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <label for="email">Your Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                </div>
+                            <div class="col-lg-12 wow zoomIn" data-wow-delay="0.5s">
+                                <p class="mb-2">Call me:</p>
+                                <h3 class="fw-bold">+91 9500882564</h3>
+                                <hr style="border-top: 1px solid #ccc; width: 83%;">
                             </div>
-                            <div class="col-12 pb-3">
-                                <div class="form-floating">
-                                    <label for="subject">Subject</label>
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                </div>
-                            </div>
-                            <div class="col-12 pb-3">
-                                <div class="form-floating">
-                                    <label for="message">Message</label>
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                        style="height: 100px"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12" style="display: flex; justify-content: right;">
-                                <button class="main-btn" type="submit">Send Message</button>
+                            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.6s">
+                                <p class="mb-2">Mail me:</p>
+                                <h3 class="fw-bold">santhosh.kumars.engg@gmail.com</h3>
                             </div>
                         </div>
-                    </form>
-                </div>
-                <div class="col-lg-12 pt-3">
-                    <div style="display: flex; justify-content: center;">
-                        <p class="mt-2 mb-2">OR</p>
                     </div>
-                    <p class="mb-3">Follow me:</p>
-                    <div class="social-btns">
-                        <a class="btn instagram" href="https://www.instagram.com/_.sandy.17._/" target="_blank"><i
-                                class="fa fa-instagram"></i></a>
-                        <a class="btn twitter" href="https://twitter.com/Sandy_enggrr" target="_blank"><i
-                                class="fa fa-twitter"></i></a>
-                        <a class="btn github" href="https://github.com/Sandy-exe" target="_blank"><i
-                                class="fa fa-github"></i></a>
-                        <a class="btn linkedin" href="https://www.linkedin.com/in/santhosh-kumar-santhanam/"
-                            target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a class="btn spotify" href="https://open.spotify.com/user/31eclmlgguf5apjzrd4soucy3it4"
-                            target="_blank"><i class="fa fa-brands fa-spotify"></i></a>
+                </div>
+
+
+
+
+                <div class="Form-card">
+                    <div class="Form-control col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.2s"
+                        style="padding-top: 20px;">
+                        <form action="https://formspree.io/f/mpwzerpn" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6 pb-3">
+                                    <div class="form-floating">
+                                        <label for="name">Your Name</label>
+                                        <input type="text" class="form-control" id="name" name="name"
+                                            placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <label for="email">Your Email</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-12 pb-3">
+                                    <div class="form-floating">
+                                        <label for="subject">Subject</label>
+                                        <input type="text" class="form-control" id="subject" name="subject"
+                                            placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-12 pb-3">
+                                    <div class="form-floating">
+                                        <label for="message">Message</label>
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                            name="message" style="height: 100px"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12" style="display: flex; justify-content: right;">
+                                    <button class="main-btn" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-12 pt-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div style="display: flex; justify-content: center;">
+                            <p class="mt-2 mb-2">OR</p>
+                        </div>
+                        <p class="mb-3">Follow me:</p>
+                        <div class="social-btns">
+                            <a class="btn instagram" href="https://www.instagram.com/_.sandy.17._/" target="_blank"><i
+                                    class="fa fa-instagram"></i></a>
+                            <a class="btn twitter" href="https://twitter.com/Sandy_enggrr" target="_blank"><i
+                                    class="fa fa-twitter"></i></a>
+                            <a class="btn github" href="https://github.com/Sandy-exe" target="_blank"><i
+                                    class="fa fa-github"></i></a>
+                            <a class="btn linkedin" href="https://www.linkedin.com/in/santhosh-kumar-santhanam/"
+                                target="_blank"><i class="fa fa-linkedin"></i></a>
+                            <a class="btn spotify" href="https://open.spotify.com/user/31eclmlgguf5apjzrd4soucy3it4"
+                                target="_blank"><i class="fa fa-brands fa-spotify"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -845,10 +906,11 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <!--====== Parallax js ======-->
     <script src="assets/js/parallax.min.js"></script>
 
-    <script src="assets/js/Main1.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <!--====== jquery js ======-->
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
