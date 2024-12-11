@@ -2,62 +2,265 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertical Card Scrolling Animation</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        .cards {
+            margin-bottom: 20px;
+            display: grid;
+            width: 300px;
+            height: 350px;
+            perspective: 1000px;
+        }
+
+        .card_port {
+            position: relative;
+            display: block;
+            height: 100%;
+            border-radius: calc(var(--curve) * 1px);
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .card_image {
+            width: 100%;
+            height: 100%;
+            /* Ensure the image fills the height of the container */
+            object-fit: cover;
+        }
+
+        .card_overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            border-radius: calc(var(--curve) * 1px);
+            background-color: var(--surface-color);
+            transform: translateY(100%);
+            transition: 0.2s ease-in-out;
+        }
+
+        .card_port:hover .card_overlay {
+            transform: translateY(0);
+        }
+
+        .card_header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1.5em;
+            padding: 1.5em;
+            border-radius: calc(var(--curve) * 1.5px) 0 0 0;
+            background-color: var(--surface-color);
+
+            transform: translateY(-100%);
+            transition: 0.2s ease-in-out;
+        }
+
+        .card_arc {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            z-index: 1;
+        }
+
+        .card_arc path {
+            fill: var(--surface-color);
+            d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+        }
+
+        .card_port:hover .card_header {
+            transform: translateY(0);
+        }
+
+        .card_thumb {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .card_title {
+            font-size: 1em;
+            margin: 0 0 0.3em;
+            color: #6a515e;
+        }
+
+        .card_tagline {
+            display: block;
+            margin: 1em 0;
+            font-family: "MockFlowFont";
+            font-size: 0.8em;
+            color: #d7bdca;
+        }
+
+        .card_status {
+            font-size: 0.8em;
+            color: #000000;
+        }
+
+        .card_description {
+            padding: 0 2em 2em;
+            margin: 0;
+            color: #000000;
+            overflow: hidden;
+            line-height: 1.5;
+        }
+
+        .card {
+            width: 150px;
+            height: 200px;
+            margin: 10px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #eae5e5;
+            height: calc((100% - 30px) / 2) !important;
+            width: 100px;
+            /* Center slide text vertically */
+            
+        }
+
+        .swiper-container-wrapper {
+    width: 50%; /* Adjust to your desired width */
+    height: 500px; /* Adjust to your desired height */
+    margin: 0 auto; /* Centers the container horizontally */
+    overflow: hidden; /* Prevents overflowing content */
+    border: 2px solid #ccc; /* Optional: Adds a border around the wrapper */
+    border-radius: 10px; /* Optional: Adds rounded corners to the wrapper */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for better visual appeal */
+}
+/* Pagination styling */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background for visibility */
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Right button */
+.swiper-button-next {
+    right: 10px;
+}
+
+/* Left button */
+.swiper-button-prev {
+    left: 10px;
+}
+
+    </style>
 </head>
 
 <body>
-    <h1>GeeksforGeeks</h1>
-    <h3>Vertical Card Sliding Animation</h3>
-    <div class="cont">
-        <div class="cards">
-            <div class="card">
-                <p class="card-text"></p>
+    <!-- Wrapper for Swiper -->
+    <div class="swiper-container-wrapper">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="cards swiper-slide portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.0s">
+                        <a href="https://github.com/Sandy-exe/NUS_Project_SpeakRite" class="card_port" target="_blank">
+                            <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                        <path />
+                                    </svg>
+                                    <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
+                                    <div class="card_header-text">
+                                        <h3 class="card_title">Speak-Rite</h3>
+                                        <span class="card_status">Machine Learning/AI</span>
+                                    </div>
+                                </div>
+                                <p class="card_description">SpeakRite is an ASR project using Whisper for
+                                    speech-to-text,
+                                    error correction, and GTTS for real-time pronunciation feedback.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
             </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <div class="card">
-                <p class="card-text"></p>
-            </div>
-            <!-- Add more cards here as needed -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            grid: {
+                rows: 2,
+            },
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next", // Next button
+                prevEl: ".swiper-button-prev", // Previous button
+            }
+        });
+    </script>
 </body>
+
 
 </html>

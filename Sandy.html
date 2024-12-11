@@ -9,12 +9,18 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- CSS Libraries -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
+    <link rel="stylesheet" href="./style.css">
+
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -28,6 +34,8 @@
 </head>
 
 <body>
+
+
 <section id="home-section" class="home-section" style="padding-bottom: 45px;">
     <header id="home" class="header-area">
         <div class="navigation">
@@ -54,8 +62,8 @@
                         <div class="flex flex-col items-center w-40 h-full overflow-hidden text-gray-700 bg-gray-100 rounded" id="sidebar">
                         <button class="text-gray-700 absolute top-3 right-3" onclick="toggleSidebar()"><img class="h-5 w-5" src="assets/images/Card_images/close.png"></button>
                         <div class="flex items-center justify-between w-full p-3">
-                                <img class="w-40 h-30 top-40" src="assets/images/Extra_anime/Gojo2.png" alt="Logo" style="">    
-                            </div>
+                                <img class="w-40 h-30 top-40" src="assets/images/Extra_anime/Gojo2.png" alt="Logo" >    
+                        </div>
                             
                             <ul class="sidebar-nav w-full flex flex-col items-center mt-4">
                                 <li class="w-full">
@@ -403,20 +411,13 @@
                 </div>
             </div>
 
-            <!-- <div class="Navigator-container">-->
-            <div class="portfolio-buttons">
-                <button style="display: none;" id="previous-btn" onclick="showPreviousPortfolio()">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button style="display: none;" id="next-btn" onclick="showNextPortfolio()">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
+      
 
-
-            <div id="portfolio-container" class="row portfolio-container">
-
-                <div class="col-lg-4 col-md-6 col-sm-12 cards portfolio-item filter-2 wow fadeInUp"
+            <div id="portfolio-container" class="portfolio-container">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                 <div class="swiper-slide">   
+                <div  class="cards portfolio-item filter-2 wow fadeInUp"
                     data-wow-delay="0.0s">
                     <a href="https://github.com/Sandy-exe/NUS_Project_SpeakRite" class="card_port" target="_blank">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
@@ -437,9 +438,11 @@
                                 feedback.</p>
                         </div>
                     </a>
+</div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
+                
+<div class="swiper-slide">
+                <div class="cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://github.com/Sandy-exe/Google-Sheet-Mysql-Sync" class="card_port" target="_blank">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
                         <div class="card_overlay">
@@ -459,8 +462,9 @@
                         </div>
                     </a>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
+</div>
+<div class="swiper-slide">
+                <div class="cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://github.com/Sandy-exe/DPBH_Hackathon_Main" class="card_port" target="_blank">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
                         <div class="card_overlay">
@@ -481,7 +485,9 @@
                     </a>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
+            </div>
+            <div class="swiper-slide">
+                <div class="cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://github.com/Sandy-exe/Dashboard_Website_Internship" class="card_port"
                         target="_blank">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
@@ -501,8 +507,9 @@
                         </div>
                     </a>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
+</div>
+<div class="swiper-slide">
+    <div class="cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://github.com/Sandy-exe/Bucket-List" class="card_port" target="_blank">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
                         <div class="card_overlay">
@@ -521,8 +528,9 @@
                         </div>
                     </a>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
+</div>
+<div class="swiper-slide">
+                <div class="cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://github.com/Sandy-exe/ZB-Mart" class="card_port" target="_blank">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
                         <div class="card_overlay">
@@ -542,8 +550,9 @@
                         </div>
                     </a>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-2 hidden wow fadeInUp" data-wow-delay="0.2s">
+</div>
+<div class="swiper-slide">
+                <div class="cards filter-2 wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://github.com/Sandy-exe/Talk2See" class="card_port" target="_blank">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
                         <div class="card_overlay">
@@ -562,8 +571,9 @@
                         </div>
                     </a>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-2 hidden wow fadeInUp" data-wow-delay="0.2s">
+</div>
+<div class="swiper-slide">
+                <div class="cards filter-2 wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://github.com/Sandy-exe/GYM_Pose_Estimation" class="card_port" target="_blank">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
                         <div class="card_overlay">
@@ -582,8 +592,9 @@
                         </div>
                     </a>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-1 hidden wow fadeInUp" data-wow-delay="0.2s">
+</div>
+<div class="swiper-slide">
+                <div class="cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://github.com/Sandy-exe/E-NaVIT-Event-Navigation-VIT" class="card_port target="
                         _blank"">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
@@ -604,8 +615,9 @@
                         </div>
                     </a>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-4 hidden wow fadeInUp" data-wow-delay="0.2s">
+</div>
+<div class="swiper-slide">
+                <div class="cards filter-4 wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://www.linkedin.com/posts/santhosh-kumar-santhanam_darkpatterns-transparency-hackathonfinals-activity-7199670814168764416-j9jL?utm_source=share&utm_medium=member_desktop"
                         target="_blank" class="card_port">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
@@ -628,8 +640,9 @@
                         </div>
                     </a>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-5 hidden wow fadeInUp" data-wow-delay="0.2s">
+</div>
+<div class="swiper-slide">
+                <div class="cards filter-5  wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/C648NLEEJGAJ"
                         target="_blank" class="card_port">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
@@ -652,8 +665,9 @@
                         </div>
                     </a>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-5 hidden wow fadeInUp" data-wow-delay="0.2s">
+</div>
+<div class="swiper-slide">
+                <div class="cards filter-5  wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://www.linkedin.com/posts/activity-7166107298526937088-ewtr?utm_source=share&utm_medium=member_desktop"
                         target="_blank" class="card_port">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
@@ -676,8 +690,9 @@
                         </div>
                     </a>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 cards filter-5 hidden wow fadeInUp" data-wow-delay="0.2s">
+            </div>
+<div class="swiper-slide">
+                <div class="cards filter-5  wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://drive.google.com/file/d/14gJ7V9LHmnDaHgiSSPE5jJeGjJkSXvap/view?usp=sharing"
                         target="_blank" class="card_port">
                         <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
@@ -700,9 +715,10 @@
                     </a>
                 </div>
             </div>
-            <div class="portfolio-buttons">
-
-            </div>
+</div>
+<div class="swiper-pagination"></div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
             <!-- 
             </div> -->
         </div>
@@ -721,26 +737,108 @@
             <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap"
                 rel="stylesheet">
 
-            <div class="card-container">
-                <div class="card wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="card__thumb">
-                        <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
-                        <div class="card__caption">
-                            <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
+            
 
-                            <p class="card__snippet">
-                                There’s a quote from Arcane that really resonates with me:
-                                <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
-                                    smartest. No. It comes to those who
-                                    will do anything to achieve it.”</i>
-                            </p>
-                            <a target="_blank"
-                                href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
-                                class="card__button">Read more</a>
+            <section class="card-container">
+                <div class="owl-carousel custom-carousel owl-theme">
+                    <div class="card wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="card__thumb">
+                            <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
+                            <div class="card__caption">
+                                <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
+                        
+                                <p class="card__snippet">
+                                    There’s a quote from Arcane that really resonates with me:
+                                    <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
+                                        smartest. No. It comes to those who
+                                        will do anything to achieve it.”</i>
+                                </p>
+                                <a target="_blank"
+                                    href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
+                                    class="card__button">Read more</a>
+                            </div>
                         </div>
                     </div>
+                    <div class="card wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="card__thumb">
+                            <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
+                            <div class="card__caption">
+                                <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
+                    
+                                <p class="card__snippet">
+                                    There’s a quote from Arcane that really resonates with me:
+                                    <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
+                                        smartest. No. It comes to those who
+                                        will do anything to achieve it.”</i>
+                                </p>
+                                <a target="_blank"
+                                    href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
+                                    class="card__button">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="card__thumb">
+                            <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
+                            <div class="card__caption">
+                                <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
+                    
+                                <p class="card__snippet">
+                                    There’s a quote from Arcane that really resonates with me:
+                                    <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
+                                        smartest. No. It comes to those who
+                                        will do anything to achieve it.”</i>
+                                </p>
+                                <a target="_blank"
+                                    href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
+                                    class="card__button">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="card__thumb">
+                            <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
+                            <div class="card__caption">
+                                <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
+                    
+                                <p class="card__snippet">
+                                    There’s a quote from Arcane that really resonates with me:
+                                    <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
+                                        smartest. No. It comes to those who
+                                        will do anything to achieve it.”</i>
+                                </p>
+                                <a target="_blank"
+                                    href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
+                                    class="card__button">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="card__thumb">
+                            <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
+                            <div class="card__caption">
+                                <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
+                    
+                                <p class="card__snippet">
+                                    There’s a quote from Arcane that really resonates with me:
+                                    <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
+                                        smartest. No. It comes to those who
+                                        will do anything to achieve it.”</i>
+                                </p>
+                                <a target="_blank"
+                                    href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
+                                    class="card__button">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-            </div>
+                
+            </section>
+
+
+
+            
         </div>
     </div>
     <!-- Blog End -->
@@ -917,6 +1015,10 @@
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
 
 
     <!-- Template Javascript -->

@@ -1,9 +1,24 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    grid: {
+      rows: 2,
+    },
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next", // Next button
+      prevEl: ".swiper-button-prev", // Previous button
+    },
+  });
   // Get all filter buttons and portfolio cards
   const filterButtons = document.querySelectorAll("#portfolio-filter li");
   const cards = document.querySelectorAll(".portfolio-container .cards");
-  let filteredCards = [];
-  filteredCards = Array.from(cards);
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -13,77 +28,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const filterValue = button.getAttribute("data-filter");
 
-      // Filter the cards based on the selected category
-      if (filterValue === "*") {
-        filteredCards = Array.from(cards); // If '*' is selected, show all cards
-      } else {
-        filteredCards = Array.from(cards).filter((card) => {
-          return card.classList.contains(filterValue.substring(1));
-        });
-      }
-
-      currentPage = 1; // Reset to the first page when filter changes
-      updateCardVisibility();
+      // Show or hide portfolio cards based on the selected category
+      cards.forEach((card) => {
+        if (
+          filterValue === "*" ||
+          card.classList.contains(filterValue.substring(1))
+        ) {
+          card.style.display = "block"; // Show the card
+          swiper.update();
+        } else {
+          card.style.display = "none"; // Hide the card
+          swiper.update();
+        }
+      });
     });
   });
-
-  // Pagination functionality
-  const cardsPerPage = 6;
-  let currentPage = 1;
-
-  function updateCardVisibility() {
-    const totalCards = filteredCards.length;
-    const totalPages = Math.ceil(totalCards / cardsPerPage);
-
-    if (totalCards === 0) {
-      // No cards to show, return early
-      document.getElementById("previous-btn").style.display = "none";
-      document.getElementById("next-btn").style.display = "none";
-      return;
-    }
-
-    // Group the cards into pages
-    const groupedCards = [];
-    for (let i = 0; i < totalCards; i += cardsPerPage) {
-      groupedCards.push(filteredCards.slice(i, i + cardsPerPage));
-    }
-
-    // Hide all cards initially
-    cards.forEach((card) => card.classList.add("hidden"));
-
-    // Show cards for the current page
-    const currentGroup = groupedCards[currentPage - 1];
-    currentGroup.forEach((card) => {
-      card.classList.remove("hidden");
-    });
-
-    // Toggle visibility of pagination buttons
-    document.getElementById("previous-btn").style.display =
-      currentPage > 1 ? "block" : "none";
-    document.getElementById("next-btn").style.display =
-      currentPage < totalPages ? "block" : "none";
-  }
-
-  // Event listeners for the navigation buttons
-  window.showNextPortfolio = function () {
-    const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
-    if (currentPage < totalPages) {
-      currentPage++;
-      updateCardVisibility();
-      window.scrollBy(0, 1);
-    }
-  };
-
-  window.showPreviousPortfolio = function () {
-    if (currentPage > 1) {
-      currentPage--;
-      updateCardVisibility();
-      window.scrollBy(0, 1);
-    }
-  };
-
-  // Initial display setup
-  updateCardVisibility();
 });
 
 (function ($) {
@@ -150,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
   // Typed Initiate
   if ($(".header-content-right h2").length == 1) {
     var typed_strings = $(".header-content-right .typed-text").text();
@@ -163,6 +121,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  var owl = $(".owl-carousel");
+  owl.owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 1,
+      },
+      960: {
+        items: 1,
+      },
+      1000: {
+        items: 2,
+      },
+      1200: {
+        items: 2,
+      },
+      1300: {
+        items: 3,
+      },
+    },
+  });
 })(jQuery);
 function change(event, tabName) {
   // Hide all tab contents
@@ -184,7 +168,6 @@ function change(event, tabName) {
   // Optional: Scroll to ensure active tab is visible
   window.scrollBy(0, 1);
 }
-
 
 function toggleSidebar() {
   const sidebar = document.getElementById("sidebar");
