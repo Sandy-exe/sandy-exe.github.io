@@ -18,7 +18,8 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
     <link rel="stylesheet" href="./style.css">
 
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
@@ -36,824 +37,911 @@
 <body>
 
 
-<section id="home-section" class="home-section" style="padding-bottom: 45px;">
-    <header id="home" class="header-area">
-        <div class="navigation">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="assets/images/Extra_anime/Gojo2.png" alt="Logo" style="width: 100px;">
-                            </a>
-                            <button class="navbar-toggler" onclick="toggleSidebar()">
-                                <img src="assets/images/Card_images/icons8-menu-30.png" alt="Menu Icon" style="width: 24px; height: 24px;">
-                            </button>
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active"><a class="page-scroll" href="#home">Home</a></li>
-                                <li class="nav-item"><a class="page-scroll" href="#about">About</a></li>
-                                <li class="nav-item"><a class="page-scroll" href="#experience">Experience</a></li>
-                                <li class="nav-item"><a class="page-scroll" href="#portfolio">Portfolio</a></li>
-                                <li class="nav-item"><a class="page-scroll" href="#blog">Blog</a></li>
-                                <li class="nav-item"><a class="page-scroll" href="#contact">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <!-- Sidebar -->
-                        <div class="flex flex-col items-center w-40 h-full overflow-hidden text-gray-700 bg-gray-100 rounded" id="sidebar">
-                        <button class="text-gray-700 absolute top-3 right-3" onclick="toggleSidebar()"><img class="h-5 w-5" src="assets/images/Card_images/close.png"></button>
-                        <div class="flex items-center justify-between w-full p-3">
-                                <img class="w-40 h-30 top-40" src="assets/images/Extra_anime/Gojo2.png" alt="Logo" >    
-                        </div>
-                            
-                            <ul class="sidebar-nav w-full flex flex-col items-center mt-4">
-                                <li class="w-full">
-                                    <a class="flex items-center w-full h-12 px-3 rounded hover:bg-gray-300" href="#home">
-                                        <img class="w-4 h-4" src="assets/images/Card_images/home-icon.svg" alt="Home Icon">
-                                        <span class="ml-2 text-sm font-medium">Home</span>
-                                    </a>
-                                </li>
-                                <li class="w-full">
-                                    <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#about">
-                                        <img class="w-6 h-6" src="assets/images/Card_images/about-icon.svg" alt="About Icon">
-                                        <span class="ml-2 text-sm  text-[#4A4A4A] font-medium">About</span>
-                                    </a>
-                                </li>
-                                <li class="w-full">
-                                    <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#experience">
-                                        <img class="w-6 h-6" src="assets/images/Card_images/experience-icon.png" alt="Experience Icon">
-                                        <span class="ml-2 text-sm font-medium">Experience</span>
-                                    </a>
-                                </li>
-                                <li class="w-full">
-                                    <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#portfolio">
-                                        <img class="w-6 h-6" src="assets/images/Card_images/portfolio-icon.png" alt="Portfolio Icon">
-                                        <span class="ml-2 text-sm font-medium">Portfolio</span>
-                                    </a>
-                                </li>
-                                <li class="w-full">
-                                    <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#blog">
-                                        <img class="w-6 h-6" src="assets/images/Card_images/blog-icon.png" alt="Blog Icon">
-                                        <span class="ml-2 text-sm font-medium">Blog</span>
-                                    </a>
-                                </li>
-                                <li class="w-full">
-                                    <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#contact">
-                                        <img class="w-6 h-6" src="assets/images/Card_images/contact-icon.png" alt="Contact Icon">
-                                        <span class="ml-2 text-#324468 font-medium">Contact</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-
-                        
-                        <!-- Overlay -->
-                        <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
-                         <!-- navbar -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- navigation -->
-
-        <div id="parallax" class="header-content d-flex align-items-center">
-            <div class="container">
-
-                <div class="header-shape Denji layer" data-depth="0.20">
-                    <img src="assets/images/Home/shape/Untitled.png " alt="Shape">
-                </div> <!-- header shape -->
-
-                <div class="header-shape Squares layer" data-depth="0.50">
-                    <img src="assets/images/Home/shape/Squares.png" alt="Shape">
-                </div>
-
-                <div class="image-container-home">
-                    <div class="header-shape lines45 layer" data-depth="0.30">
-                        <img src="assets/images/Home/shape/lines2.png " alt="Shape">
-                    </div> <!-- header shape -->
-                </div>
-
-                <div class="row align-items-center">
-                    <!-- Text content (left side) -->
-                    <div class="col-lg-6 col-md-8 col-sm-12">
-                        <div class="header-content-right">
-                            <div class="hero-text">
-                                <h4 class="sub-title">Hello, I’m</h4>
-                                <h1 class="title">Santhosh Kumar S</h1>
-                                <h2></h2>
-                                <div class="typed-text" style="display: none;">
-                                    ML Engineer, App Developer, Web Developer
-                                </div>
-                            </div>
-                            <br>
-                            <div class="main-btn1">
-                                <a class="main-btn" href="https://github.com/Sandy-exe" target="_blank">View my Work</a>
-                            </div>
-                        </div> <!-- header content right -->
-                    </div>
-                
-                    <!-- Image content (right side) -->
-                    <div class="col-lg-6 col-md-4 col-sm-12 offset-lg-0 offset-md-2">
-                        <div class="header-image d-none d-lg-block">
-                            <img src="assets/images/Home/hero.png" style="padding-top:60px;" alt="hero">
-                        </div> <!-- header image -->
-                    </div>
-                </div>
-<!-- row -->
-            </div> <!-- container -->
-            <div class="header-social">
+    <section id="home-section" class="home-section" style="padding-bottom: 45px;">
+        <header id="home" class="header-area">
+            <div class="navigation">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="header-social-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-playstation"></i></a></li>
-                                    <li><a href="#"><i class="fa-sharp fa-regular fa-square"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-x"></i></a></li>
-                                    <li><a href="#"><i class="fa-sharp fa-regular fa-circle"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-xbox"></i></a></li>
+                            <nav class="navbar navbar-expand-lg">
+                                <a class="navbar-brand" href="index.html">
+                                    <img src="assets/images/Extra_anime/Gojo2.png" alt="Logo" style="width: 100px;">
+                                </a>
+                                <button class="navbar-toggler" onclick="toggleSidebar()">
+                                    <img src="assets/images/Card_images/icons8-menu-30.png" alt="Menu Icon"
+                                        style="width: 24px; height: 24px;">
+                                </button>
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active"><a class="page-scroll" href="#home">Home</a></li>
+                                    <li class="nav-item"><a class="page-scroll" href="#about">About</a></li>
+                                    <li class="nav-item"><a class="page-scroll" href="#experience">Experience</a></li>
+                                    <li class="nav-item"><a class="page-scroll" href="#portfolio">Portfolio</a></li>
+                                    <li class="nav-item"><a class="page-scroll" href="#blog">Blog</a></li>
+                                    <li class="nav-item"><a class="page-scroll" href="#contact">Contact</a></li>
                                 </ul>
-                            </div> <!-- header social -->
+                            </nav>
+                            <!-- Sidebar -->
+                            <div class="flex flex-col items-center w-40 h-full overflow-hidden text-gray-700 bg-gray-100 rounded"
+                                id="sidebar">
+                                <button class="text-gray-700 absolute top-3 right-3" onclick="toggleSidebar()"><img
+                                        class="h-5 w-5" src="assets/images/Card_images/close.png"></button>
+                                <div class="flex items-center justify-between w-full p-3">
+                                    <img class="w-40 h-30 top-40" src="assets/images/Extra_anime/Gojo2.png" alt="Logo">
+                                </div>
+
+                                <ul class="sidebar-nav w-full flex flex-col items-center mt-4">
+                                    <li class="w-full">
+                                        <a class="flex items-center w-full h-12 px-3 rounded hover:bg-gray-300"
+                                            href="#home">
+                                            <img class="w-4 h-4" src="assets/images/Card_images/home-icon.svg"
+                                                alt="Home Icon">
+                                            <span class="ml-2 text-sm font-medium">Home</span>
+                                        </a>
+                                    </li>
+                                    <li class="w-full">
+                                        <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300"
+                                            href="#about">
+                                            <img class="w-6 h-6" src="assets/images/Card_images/about-icon.svg"
+                                                alt="About Icon">
+                                            <span class="ml-2 text-sm  text-[#4A4A4A] font-medium">About</span>
+                                        </a>
+                                    </li>
+                                    <li class="w-full">
+                                        <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300"
+                                            href="#experience">
+                                            <img class="w-6 h-6" src="assets/images/Card_images/experience-icon.png"
+                                                alt="Experience Icon">
+                                            <span class="ml-2 text-sm font-medium">Experience</span>
+                                        </a>
+                                    </li>
+                                    <li class="w-full">
+                                        <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300"
+                                            href="#portfolio">
+                                            <img class="w-6 h-6" src="assets/images/Card_images/portfolio-icon.png"
+                                                alt="Portfolio Icon">
+                                            <span class="ml-2 text-sm font-medium">Portfolio</span>
+                                        </a>
+                                    </li>
+                                    <li class="w-full">
+                                        <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300"
+                                            href="#blog">
+                                            <img class="w-6 h-6" src="assets/images/Card_images/blog-icon.png"
+                                                alt="Blog Icon">
+                                            <span class="ml-2 text-sm font-medium">Blog</span>
+                                        </a>
+                                    </li>
+                                    <li class="w-full">
+                                        <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300"
+                                            href="#contact">
+                                            <img class="w-6 h-6" src="assets/images/Card_images/contact-icon.png"
+                                                alt="Contact Icon">
+                                            <span class="ml-2 text-#324468 font-medium">Contact</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+                            <!-- Overlay -->
+                            <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+                            <!-- navbar -->
                         </div>
                     </div> <!-- row -->
                 </div> <!-- container -->
-            </div> <!-- header social -->
-        </div> <!-- header content -->
-    </header>
-</section>
+            </div> <!-- navigation -->
 
-<!--====== ABOUT PART START ======-->
-<section id="about" class="about" style="padding-bottom: 50px;">
-    <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about-img">
-                        <img src="assets/images/Home/hero.png" alt="Image">
+            <div id="parallax" class="header-content d-flex align-items-center">
+                <div class="container">
+
+                    <div class="header-shape Denji layer" data-depth="0.20">
+                        <img src="assets/images/Home/shape/Untitled.png " alt="Shape">
+                    </div> <!-- header shape -->
+
+                    <div class="header-shape Squares layer" data-depth="0.50">
+                        <img src="assets/images/Home/shape/Squares.png" alt="Shape">
+                    </div>
+
+                    <div class="image-container-home">
+                        <div class="header-shape lines45 layer" data-depth="0.30">
+                            <img src="assets/images/Home/shape/lines2.png " alt="Shape">
+                        </div> <!-- header shape -->
+                    </div>
+
+                    <div class="row align-items-center">
+                        <!-- Text content (left side) -->
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                            <div class="header-content-right">
+                                <div class="hero-text">
+                                    <h4 class="sub-title">Hello, I’m</h4>
+                                    <h1 class="title">Santhosh Kumar S</h1>
+                                    <h2></h2>
+                                    <div class="typed-text" style="display: none;">
+                                        ML Engineer, App Developer, Web Developer
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="main-btn1">
+                                    <a class="main-btn" href="https://github.com/Sandy-exe" target="_blank">View my
+                                        Work</a>
+                                </div>
+                            </div> <!-- header content right -->
+                        </div>
+
+                        <!-- Image content (right side) -->
+                        <div class="col-lg-6 col-md-4 col-sm-12 offset-lg-0 offset-md-2">
+                            <div class="header-image d-none d-lg-block">
+                                <img src="assets/images/Home/hero.png" style="padding-top:60px;" alt="hero">
+                            </div> <!-- header image -->
+                        </div>
+                    </div>
+                    <!-- row -->
+                </div> <!-- container -->
+                <div class="header-social">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="header-social-icon">
+                                    <ul>
+                                        <li><a href="#"><i class="fa-brands fa-playstation"></i></a></li>
+                                        <li><a href="#"><i class="fa-sharp fa-regular fa-square"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-x"></i></a></li>
+                                        <li><a href="#"><i class="fa-sharp fa-regular fa-circle"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-xbox"></i></a></li>
+                                    </ul>
+                                </div> <!-- header social -->
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                </div> <!-- header social -->
+            </div> <!-- header content -->
+        </header>
+    </section>
+
+    <!--====== ABOUT PART START ======-->
+    <section id="about" class="about" style="padding-bottom: 50px;">
+        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="about-img">
+                            <img src="assets/images/Home/hero.png" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="about-header">
+                                <div class="about-me ">
+                                    <p>Learn About Me</p>
+                                    <h2>ML Engineer</h2>
+                                </div>
+                                <div class="GOJO">
+                                    <img src="assets/images/Extra_anime/Gojo.png" alt="Logo" style="width: 200px;">
+                                </div>
+                            </div>
+                            <div class="about-text">
+                                <p>
+                                    Hey, I'm Santhosh Kumar S, a Computer Science enthusiast with a passion for
+                                    exploring
+                                    new technologies. Whether it's
+                                    developing apps and websites or diving into AI, ML, and Robotics, I'm always looking
+                                    for
+                                    the next challenge in the tech
+                                    world.
+                                </p>
+                            </div>
+                            <div class="skills">
+                                <div class="skill-name">
+                                    <p>Python</p>
+                                    <p>85%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 85%;"></div>
+                                </div>
+                                <div class="skill-name">
+                                    <p>Machine Learning</p>
+                                    <p>85%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 85%;"></div>
+                                </div>
+
+                                <div class="skill-name">
+                                    <p>Full Stack (Django)</p>
+                                    <p>90%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 95%;"></div>
+                                </div>
+                                <div class="skill-name">
+                                    <p>App Development (Flutter)</p>
+                                    <p>85%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            <a target="_blank" class="main-btn"
+                                href="https://drive.google.com/file/d/10hTvZcTPmWgn9DzPxLtz-8f1GAFkyQ-G/view?usp=sharing">View
+                                My Resume</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <div class="about-header">
-                            <div class="about-me ">
-                                <p>Learn About Me</p>
-                                <h2>ML Engineer</h2>
-                            </div>
-                            <div class="GOJO">
-                                <img src="assets/images/Extra_anime/Gojo.png" alt="Logo" style="width: 200px;">
-                            </div>
-                        </div>
-                        <div class="about-text">
+            </div>
+        </div>
+    </section>
+
+    <!--====== ABOUT PART ENDS ======-->
+
+
+
+    <!-- Experience Start -->
+    <section id="experience-section" class="Experience-class">
+        <!--SLIDER-->
+        <div class="Slider">
+            <div class="tab">
+                <div id="Exp-Tab" class="tablinks active" onclick="change(event, 'experience')">Experience</div>
+                <div style="height: 15px;"></div>
+                <div id="Edu-Tab" class="tablinks" onclick="change(event, 'education')">Education</div>
+            </div>
+            <div class="Levi-kicking" style="z-index: 10;">
+                <img src="assets/images/Extra_anime/Levi_kicking.png">
+            </div>
+        </div>
+        <!--Experience-->
+        <div class="experience" id="experience" style="display: block;">
+            <div class="container">
+                <header id="section-header" class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>My Resume</p>
+                    <h1>Working Experience</h1>
+                </header>
+                <div class="timeline">
+                    <!-- NUS Deep Learning Intern on the left -->
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">12/2023 - 01/2024</div>
+                            <h2>NUS Deep Learning Intern</h2>
+                            <h4>National University of Singapore (NUS), Singapore</h4>
                             <p>
-                                Hey, I'm Santhosh Kumar S, a Computer Science enthusiast with a passion for exploring
-                                new technologies. Whether it's
-                                developing apps and websites or diving into AI, ML, and Robotics, I'm always looking for
-                                the next challenge in the tech
-                                world.
+                                Worked on a project to improve deep learning models for computer vision, focusing on
+                                data
+                                augmentation and model optimization.
                             </p>
                         </div>
-                        <div class="skills">
-                            <div class="skill-name">
-                                <p>Python</p>
-                                <p>85%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 85%;"></div>
-                            </div>
-                            <div class="skill-name">
-                                <p>Machine Learning</p>
-                                <p>85%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 85%;"></div>
-                            </div>
-
-                            <div class="skill-name">
-                                <p>Full Stack (Django)</p>
-                                <p>90%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 95%;"></div>
-                            </div>
-                            <div class="skill-name">
-                                <p>App Development (Flutter)</p>
-                                <p>85%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 95%;"></div>
-                            </div>
-                        </div>
-                        <a target="_blank" class="main-btn"
-                            href="https://drive.google.com/file/d/10hTvZcTPmWgn9DzPxLtz-8f1GAFkyQ-G/view?usp=sharing">View My Resume</a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!--====== ABOUT PART ENDS ======-->
-
-
-
-<!-- Experience Start -->
-<section id="experience-section" class="Experience-class">
-    <!--SLIDER-->
-    <div class="Slider">
-        <div class="tab">
-            <div id="Exp-Tab" class="tablinks active" onclick="change(event, 'experience')">Experience</div>
-            <div style="height: 15px;"></div>
-            <div id="Edu-Tab" class="tablinks" onclick="change(event, 'education')">Education</div>
-        </div>
-        <div class="Levi-kicking" style="z-index: 10;">
-            <img src="assets/images/Extra_anime/Levi_kicking.png">
-        </div>
-    </div>
-    <!--Experience-->
-    <div class="experience" id="experience" style="display: block;">
-        <div class="container">
-            <header id="section-header" class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                <p>My Resume</p>
-                <h1>Working Experience</h1>
-            </header>
-            <div class="timeline">
-                <!-- NUS Deep Learning Intern on the left -->
-                <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">12/2023 - 01/2024</div>
-                        <h2>NUS Deep Learning Intern</h2>
-                        <h4>National University of Singapore (NUS), Singapore</h4>
-                        <p>
-                            Worked on a project to improve deep learning models for computer vision, focusing on data
-                            augmentation and model optimization.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Armsoftech.AIR on the right -->
-                <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">08/2023 - 10/2023</div>
-                        <h2>Data Analytics Intern</h2>
-                        <h4>Armsoftech.AIR, Chennai, India</h4>
-                        <p>
-                            Developed an interactive website with a custom dashboard integrating PowerBI, improving data
-                            handling and
-                            analysis with Excel macros and MySQL, resulting in more efficient data processing.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Dreadnought Robotics on the left -->
-                <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">04/2023 - 04/2025</div>
-                        <h2>Programming Department Member</h2>
-                        <h4>Dreadnought Robotics, VIT Chennai, India</h4>
-                        <p>
-                            Working on a project to develop a Fully Autonomous Underwater Vehicle for a competition.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Zero Bugs Club on the right -->
-                <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">01/2023 - 03/2024</div>
-                        <h2>Technical Team Member</h2>
-                        <h4>Zero Bugs Club, VIT Chennai, India</h4>
-                        <p>
-                            Developed Questions for a debug round of "Tech Trivia Reboot" and Crafted a Challenging
-                            problem
-                            statement for the final Round which remained unsolved.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- EDUCATION Section-->
-    <div id="education" class="experience" style="display: none;">
-        <div class="container">
-            <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                <p>My Resume</p>
-                <h1>Education</h1>
-            </header>
-            <div class="timeline">
-                <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">09/2021 - Present</div>
-                        <h2>B.Tech Computer Science and Enginnering</h2>
-                        <h4>Vellore Institute of Technology, Chennai</h4>
-                        <p>
-                            CGPA: 8.76
-                            <br>
-                            Max GPA: 9.5
-                        </p>
-                    </div>
-                </div>
-                <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">04/2012 - 04/2021 </div>
-                        <h2>High School</h2>
-                        <h4>Smt. Ramkuwar Devi Fomra Vivekanda Vidyalaya, Chormepet</h4>
-                        <p>
-                            10th Grade: 472
-                            <br>
-                            12th Grade: 468
-                        </p>
-                    </div>
-                </div>
-                <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">02/2006 - 02/2012</div>
-                        <h2>Primary School</h2>
-                        <h4>Sri Sankara Vidyalaya Matriculation Higher Secondary School, Tambaram</h4>
-                        <p>
-                            Acheivements in Sports and Academics
-                        </p>
-                    </div>
-                </div>
-                <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">02/2005 - 01/2006 </div>
-                        <h2>Pre Kinder-Garten</h2>
-                        <h4>Vidya Mandir Matriculation school, Tambaram, TamilNadu</h4>
-                        <p>
-                            Pre Kinder-Garten Stuff
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Portfolio Start -->
-<section id="portfolio" class="Portfolio">
-
-    <div class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s" style="margin-bottom: 30px;">
-                <p>My Portfolio</p>
-                <h1>My Portfolio</h1>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <ul id="portfolio-filter">
-                        <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-1">Mobile Apps</li>
-                        <li data-filter=".filter-2">Machine Learning/AI</li>
-                        <li data-filter=".filter-3">Web Apps</li>
-                        <li data-filter=".filter-4">Acheivements</li>
-                        <li data-filter=".filter-5">Certifications</li>
-                    </ul>
-                </div>
-            </div>
-
-      
-
-            <div id="portfolio-container" class="portfolio-container">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                 <div class="swiper-slide">   
-                <div  class="cards portfolio-item filter-2 wow fadeInUp"
-                    data-wow-delay="0.0s">
-                    <a href="https://github.com/Sandy-exe/NUS_Project_SpeakRite" class="card_port" target="_blank">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">Speak-Rite</h3>
-                                    <span class="card_status">Machine Learning/AI</span>
-                                </div>
-                            </div>
-                            <p class="card_description">SpeakRite is an ASR project using Whisper for
-                                speech-to-text,
-                                error correction, and GTTS for real-time pronunciation
-                                feedback.</p>
-                        </div>
-                    </a>
-</div>
-                </div>
-                
-<div class="swiper-slide">
-                <div class="cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="https://github.com/Sandy-exe/Google-Sheet-Mysql-Sync" class="card_port" target="_blank">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">Google Sheet Sync</h3>
-                                    <span class="card_status">App Dev</span>
-                                </div>
-                            </div>
-                            <p class="card_description">This Flutter app integrates MySQL via Django for CRUD
-                                operations, real-time Google Sheets sync, and "Last Write Wins"
-                                conflict resolution.</p>
-                        </div>
-                    </a>
-                </div>
-</div>
-<div class="swiper-slide">
-                <div class="cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="https://github.com/Sandy-exe/DPBH_Hackathon_Main" class="card_port" target="_blank">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">Guard’s Eye</h3>
-                                    <span class="card_status">Web Dev</span>
-                                </div>
-                            </div>
-                            <p class="card_description">Guard’s Eye is a browser extension using machine learning
-                                and image recognition to combat deceptive e-commerce practices
-                                like fake reviews.</p>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-            <div class="swiper-slide">
-                <div class="cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="https://github.com/Sandy-exe/Dashboard_Website_Internship" class="card_port"
-                        target="_blank">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">Armsoftech.AIR's Client DashBoard</h3>
-                                    <span class="card_status">Web Dev</span>
-                                </div>
-                            </div>
-                            <p class="card_description">At Armsoftech, I crafted a dynamic Django-based dashboard
-                                for client access during my internship.</p>
-                        </div>
-                    </a>
-                </div>
-</div>
-<div class="swiper-slide">
-    <div class="cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="https://github.com/Sandy-exe/Bucket-List" class="card_port" target="_blank">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">Bucket List</h3>
-                                    <span class="card_status">App Dev</span>
-                                </div>
-                            </div>
-                            <p class="card_description">I developed a Todo-App using Flutter for the user interface
-                                and Firebase Firestore for data storage.</p>
-                        </div>
-                    </a>
-                </div>
-</div>
-<div class="swiper-slide">
-                <div class="cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="https://github.com/Sandy-exe/ZB-Mart" class="card_port" target="_blank">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">ZB Mart</h3>
-                                    <span class="card_status">Web Dev</span>
-                                </div>
-                            </div>
-                            <p class="card_description">ZB Mart, an e-commerce platform for ZBC at VITC, utilizes
-                                Django for efficient product management and user
-                                authentication.</p>
-                        </div>
-                    </a>
-                </div>
-</div>
-<div class="swiper-slide">
-                <div class="cards filter-2 wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="https://github.com/Sandy-exe/Talk2See" class="card_port" target="_blank">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">Talk2See</h3>
-                                    <span class="card_status">Machine Learning/AI</span>
-                                </div>
-                            </div>
-                            <p class="card_description">Talk2See is a real-time assistive tool for visually impaired
-                                individuals.</p>
-                        </div>
-                    </a>
-                </div>
-</div>
-<div class="swiper-slide">
-                <div class="cards filter-2 wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="https://github.com/Sandy-exe/GYM_Pose_Estimation" class="card_port" target="_blank">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">Gym-Pose-Estimation</h3>
-                                    <span class="card_status">Machine Learning/AI</span>
-                                </div>
-                            </div>
-                            <p class="card_description">An AI-driven system for assessing injury risks during gym
-                                workouts.</p>
-                        </div>
-                    </a>
-                </div>
-</div>
-<div class="swiper-slide">
-                <div class="cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="https://github.com/Sandy-exe/E-NaVIT-Event-Navigation-VIT" class="card_port target="
-                        _blank"">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">E-NaVIT<br>Event-Navigation-VIT</h3>
-                                    <span class="card_status">App Dev</span>
-                                </div>
-                            </div>
-                            <p class="card_description">
-                                The ENAVIT app is a cross-platform event management tool for Vellore Institute of
-                                Technology, Chennai.</p>
-                        </div>
-                    </a>
-                </div>
-</div>
-<div class="swiper-slide">
-                <div class="cards filter-4 wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="https://www.linkedin.com/posts/santhosh-kumar-santhanam_darkpatterns-transparency-hackathonfinals-activity-7199670814168764416-j9jL?utm_source=share&utm_medium=member_desktop"
-                        target="_blank" class="card_port">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">DBPH Finalist</h3>
-                                    <span class="card_status">Acheivement</span>
-                                </div>
-                            </div>
-                            <p class="card_description">
-                                Participated in the grand finale of the Dark Patterns Buster Hackathon hosted by the
-                                Department of Consumer Affairs,
-                                Government of India, at IIT BHU in Varanasi.
+                    <!-- Armsoftech.AIR on the right -->
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">08/2023 - 10/2023</div>
+                            <h2>Data Analytics Intern</h2>
+                            <h4>Armsoftech.AIR, Chennai, India</h4>
+                            <p>
+                                Developed an interactive website with a custom dashboard integrating PowerBI, improving
+                                data
+                                handling and
+                                analysis with Excel macros and MySQL, resulting in more efficient data processing.
                             </p>
                         </div>
-                    </a>
-                </div>
-</div>
-<div class="swiper-slide">
-                <div class="cards filter-5  wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/C648NLEEJGAJ"
-                        target="_blank" class="card_port">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">Google Data Analytics Specialization</h3>
-                                    <span class="card_status">Certification</span>
-                                </div>
-                            </div>
-                            <p class="card_description">
-                                I completed the Google Data Analytics Specialization, where I learned the key data
-                                analytics steps: ask, prepare,
-                                process, analyze, act, and share.
+                    </div>
+
+                    <!-- Dreadnought Robotics on the left -->
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">04/2023 - 04/2025</div>
+                            <h2>Programming Department Member</h2>
+                            <h4>Dreadnought Robotics, VIT Chennai, India</h4>
+                            <p>
+                                Working on a project to develop a Fully Autonomous Underwater Vehicle for a competition.
                             </p>
                         </div>
-                    </a>
-                </div>
-</div>
-<div class="swiper-slide">
-                <div class="cards filter-5  wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="https://www.linkedin.com/posts/activity-7166107298526937088-ewtr?utm_source=share&utm_medium=member_desktop"
-                        target="_blank" class="card_port">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">TensorFlow Developer Certificate</h3>
-                                    <span class="card_status">Certification</span>
-                                </div>
-                            </div>
-                            <p class="card_description">
-                                Successfully earned the TensorFlow Developer Certification, advancing my learning in
-                                coding for CNNs, LSTMs, and time
-                                series concepts.
+                    </div>
+
+                    <!-- Zero Bugs Club on the right -->
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">01/2023 - 03/2024</div>
+                            <h2>Technical Team Member</h2>
+                            <h4>Zero Bugs Club, VIT Chennai, India</h4>
+                            <p>
+                                Developed Questions for a debug round of "Tech Trivia Reboot" and Crafted a Challenging
+                                problem
+                                statement for the final Round which remained unsolved.
                             </p>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
-<div class="swiper-slide">
-                <div class="cards filter-5  wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="https://drive.google.com/file/d/14gJ7V9LHmnDaHgiSSPE5jJeGjJkSXvap/view?usp=sharing"
-                        target="_blank" class="card_port">
-                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image" alt="" />
-                        <div class="card_overlay">
-                            <div class="card_header">
-                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg" alt="" />
-                                <div class="card_header-text">
-                                    <h3 class="card_title">AWS Model Deployment Training </h3>
-                                    <span class="card_status">Certification</span>
-                                </div>
-                            </div>
-                            <p class="card_description">
-                                Learned About ML model Deployment using services like SageMaker, S3, Glue, ECR,
-                                StepFunctions and Lambda.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
-            <!-- 
-            </div> -->
         </div>
-    </div>
 
-</section>
-
-<section id="blog-section" class="Blog-section">
-    <!-- Blog Start -->
-    <div class="blog" style="padding-top: 70px;" id="blog">
-        <div class="container">
-            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s" style="padding-bottom: 30px;">
-                <p>From Blog</p>
-                <h1>Latest Articles</h1>
+        <!-- EDUCATION Section-->
+        <div id="education" class="experience" style="display: none;">
+            <div class="container">
+                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>My Resume</p>
+                    <h1>Education</h1>
+                </header>
+                <div class="timeline">
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">09/2021 - Present</div>
+                            <h2>B.Tech Computer Science and Enginnering</h2>
+                            <h4>Vellore Institute of Technology, Chennai</h4>
+                            <p>
+                                CGPA: 8.76
+                                <br>
+                                Max GPA: 9.5
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">04/2012 - 04/2021 </div>
+                            <h2>High School</h2>
+                            <h4>Smt. Ramkuwar Devi Fomra Vivekanda Vidyalaya, Chormepet</h4>
+                            <p>
+                                10th Grade: 472
+                                <br>
+                                12th Grade: 468
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">02/2006 - 02/2012</div>
+                            <h2>Primary School</h2>
+                            <h4>Sri Sankara Vidyalaya Matriculation Higher Secondary School, Tambaram</h4>
+                            <p>
+                                Acheivements in Sports and Academics
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">02/2005 - 01/2006 </div>
+                            <h2>Pre Kinder-Garten</h2>
+                            <h4>Vidya Mandir Matriculation school, Tambaram, TamilNadu</h4>
+                            <p>
+                                Pre Kinder-Garten Stuff
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap"
-                rel="stylesheet">
+        </div>
+    </section>
 
-            
+    <!-- Portfolio Start -->
+    <section id="portfolio" class="Portfolio">
 
-            <section class="card-container">
-                <div class="owl-carousel custom-carousel owl-theme">
-                    <div class="card wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="card__thumb">
-                            <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
-                            <div class="card__caption">
-                                <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
+        <div class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s" style="margin-bottom: 30px;">
+                    <p>My Portfolio</p>
+                    <h1>My Portfolio</h1>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul id="portfolio-filter">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".filter-1">Mobile Apps</li>
+                            <li data-filter=".filter-2">Machine Learning/AI</li>
+                            <li data-filter=".filter-3">Web Apps</li>
+                            <li data-filter=".filter-4">Acheivements</li>
+                            <li data-filter=".filter-5">Certifications</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div id="portfolio-container" class="portfolio-container">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="cards portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.0s">
+                                    <a href="https://github.com/Sandy-exe/NUS_Project_SpeakRite" class="card_port"
+                                        target="_blank">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">Speak-Rite</h3>
+                                                    <span class="card_status">Machine Learning/AI</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">SpeakRite is an ASR project using Whisper for
+                                                speech-to-text,
+                                                error correction, and GTTS for real-time pronunciation
+                                                feedback.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="https://github.com/Sandy-exe/Google-Sheet-Mysql-Sync" class="card_port"
+                                        target="_blank">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">Google Sheet Sync</h3>
+                                                    <span class="card_status">App Dev</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">This Flutter app integrates MySQL via Django for
+                                                CRUD
+                                                operations, real-time Google Sheets sync, and "Last Write Wins"
+                                                conflict resolution.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="https://github.com/Sandy-exe/DPBH_Hackathon_Main" class="card_port"
+                                        target="_blank">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">Guard’s Eye</h3>
+                                                    <span class="card_status">Web Dev</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">Guard’s Eye is a browser extension using machine
+                                                learning
+                                                and image recognition to combat deceptive e-commerce practices
+                                                like fake reviews.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="https://github.com/Sandy-exe/Dashboard_Website_Internship"
+                                        class="card_port" target="_blank">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">Armsoftech.AIR's Client DashBoard</h3>
+                                                    <span class="card_status">Web Dev</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">At Armsoftech, I crafted a dynamic Django-based
+                                                dashboard
+                                                for client access during my internship.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="https://github.com/Sandy-exe/Bucket-List" class="card_port"
+                                        target="_blank">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">Bucket List</h3>
+                                                    <span class="card_status">App Dev</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">I developed a Todo-App using Flutter for the
+                                                user interface
+                                                and Firebase Firestore for data storage.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cards filter-3 wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="https://github.com/Sandy-exe/ZB-Mart" class="card_port" target="_blank">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">ZB Mart</h3>
+                                                    <span class="card_status">Web Dev</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">ZB Mart, an e-commerce platform for ZBC at VITC,
+                                                utilizes
+                                                Django for efficient product management and user
+                                                authentication.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cards filter-2 wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="https://github.com/Sandy-exe/Talk2See" class="card_port" target="_blank">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">Talk2See</h3>
+                                                    <span class="card_status">Machine Learning/AI</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">Talk2See is a real-time assistive tool for
+                                                visually impaired
+                                                individuals.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cards filter-2 wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="https://github.com/Sandy-exe/GYM_Pose_Estimation" class="card_port"
+                                        target="_blank">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">Gym-Pose-Estimation</h3>
+                                                    <span class="card_status">Machine Learning/AI</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">An AI-driven system for assessing injury risks
+                                                during gym
+                                                workouts.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cards filter-1 wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="https://github.com/Sandy-exe/E-NaVIT-Event-Navigation-VIT"
+                                        class="card_port target=" _blank"">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">E-NaVIT<br>Event-Navigation-VIT</h3>
+                                                    <span class="card_status">App Dev</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">
+                                                The ENAVIT app is a cross-platform event management tool for Vellore
+                                                Institute of
+                                                Technology, Chennai.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cards filter-4 wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="https://www.linkedin.com/posts/santhosh-kumar-santhanam_darkpatterns-transparency-hackathonfinals-activity-7199670814168764416-j9jL?utm_source=share&utm_medium=member_desktop"
+                                        target="_blank" class="card_port">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">DBPH Finalist</h3>
+                                                    <span class="card_status">Acheivement</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">
+                                                Participated in the grand finale of the Dark Patterns Buster Hackathon
+                                                hosted by the
+                                                Department of Consumer Affairs,
+                                                Government of India, at IIT BHU in Varanasi.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cards filter-5  wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/C648NLEEJGAJ"
+                                        target="_blank" class="card_port">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">Google Data Analytics Specialization</h3>
+                                                    <span class="card_status">Certification</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">
+                                                I completed the Google Data Analytics Specialization, where I learned
+                                                the key data
+                                                analytics steps: ask, prepare,
+                                                process, analyze, act, and share.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cards filter-5  wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="https://www.linkedin.com/posts/activity-7166107298526937088-ewtr?utm_source=share&utm_medium=member_desktop"
+                                        target="_blank" class="card_port">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">TensorFlow Developer Certificate</h3>
+                                                    <span class="card_status">Certification</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">
+                                                Successfully earned the TensorFlow Developer Certification, advancing my
+                                                learning in
+                                                coding for CNNs, LSTMs, and time
+                                                series concepts.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cards filter-5  wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="https://drive.google.com/file/d/14gJ7V9LHmnDaHgiSSPE5jJeGjJkSXvap/view?usp=sharing"
+                                        target="_blank" class="card_port">
+                                        <img src="assets/images/Card_images/github_detective.jpg" class="card_image"
+                                            alt="" />
+                                        <div class="card_overlay">
+                                            <div class="card_header">
+                                                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg">
+                                                    <path />
+                                                </svg>
+                                                <img class="card_thumb" src="assets/images/Card_images/github_prof.jpg"
+                                                    alt="" />
+                                                <div class="card_header-text">
+                                                    <h3 class="card_title">AWS Model Deployment Training </h3>
+                                                    <span class="card_status">Certification</span>
+                                                </div>
+                                            </div>
+                                            <p class="card_description">
+                                                Learned About ML model Deployment using services like SageMaker, S3,
+                                                Glue, ECR,
+                                                StepFunctions and Lambda.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-pagination"></div>
                         
-                                <p class="card__snippet">
-                                    There’s a quote from Arcane that really resonates with me:
-                                    <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
-                                        smartest. No. It comes to those who
-                                        will do anything to achieve it.”</i>
-                                </p>
-                                <a target="_blank"
-                                    href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
-                                    class="card__button">Read more</a>
-                            </div>
-                        </div>
+                        <div class="swiper-button-next"></div>
+                        
+                        <div class="swiper-button-prev"></div>
+                        <!-- 
+            </div> -->
                     </div>
-                    <div class="card wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="card__thumb">
-                            <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
-                            <div class="card__caption">
-                                <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
-                    
-                                <p class="card__snippet">
-                                    There’s a quote from Arcane that really resonates with me:
-                                    <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
-                                        smartest. No. It comes to those who
-                                        will do anything to achieve it.”</i>
-                                </p>
-                                <a target="_blank"
-                                    href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
-                                    class="card__button">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="card__thumb">
-                            <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
-                            <div class="card__caption">
-                                <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
-                    
-                                <p class="card__snippet">
-                                    There’s a quote from Arcane that really resonates with me:
-                                    <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
-                                        smartest. No. It comes to those who
-                                        will do anything to achieve it.”</i>
-                                </p>
-                                <a target="_blank"
-                                    href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
-                                    class="card__button">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="card__thumb">
-                            <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
-                            <div class="card__caption">
-                                <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
-                    
-                                <p class="card__snippet">
-                                    There’s a quote from Arcane that really resonates with me:
-                                    <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
-                                        smartest. No. It comes to those who
-                                        will do anything to achieve it.”</i>
-                                </p>
-                                <a target="_blank"
-                                    href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
-                                    class="card__button">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="card__thumb">
-                            <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
-                            <div class="card__caption">
-                                <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
-                    
-                                <p class="card__snippet">
-                                    There’s a quote from Arcane that really resonates with me:
-                                    <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
-                                        smartest. No. It comes to those who
-                                        will do anything to achieve it.”</i>
-                                </p>
-                                <a target="_blank"
-                                    href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
-                                    class="card__button">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
-                
-            </section>
+
+    </section>
+
+    <section id="blog-section" class="Blog-section">
+        <!-- Blog Start -->
+        <div class="blog" style="padding-top: 70px;" id="blog">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s" style="padding-bottom: 30px;">
+                    <p>From Blog</p>
+                    <h1>Latest Articles</h1>
+                </div>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap"
+                    rel="stylesheet">
 
 
 
-            
+                <section class="card-container">
+                    <!-- Swiper container -->
+                    <div class="swiper ArticleSwiper">
+                        <div class="swiper-wrapper">
+                            <!-- Each "slide" is wrapped in a swiper-slide class -->
+                            <div class="swiper-slide">
+                                <div class="card wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="card__thumb">
+                                        <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
+                                        <div class="card__caption">
+                                            <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
+                                            <p class="card__snippet">
+                                                There’s a quote from Arcane that really resonates with me:
+                                                <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
+                                                    smartest. No. It comes to those who will do anything to achieve it.”</i>
+                                            </p>
+                                            <a target="_blank"
+                                                href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
+                                                class="card__button">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="card__thumb">
+                                        <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
+                                        <div class="card__caption">
+                                            <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
+                                            <p class="card__snippet">
+                                                There’s a quote from Arcane that really resonates with me:
+                                                <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
+                                                    smartest. No. It comes to those who will do anything to achieve it.”</i>
+                                            </p>
+                                            <a target="_blank"
+                                                href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
+                                                class="card__button">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Repeat similar structure for other slides -->
+                            <div class="swiper-slide">
+                                <div class="card wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="card__thumb">
+                                        <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
+                                        <div class="card__caption">
+                                            <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
+                                            <p class="card__snippet">
+                                                There’s a quote from Arcane that really resonates with me:
+                                                <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
+                                                    smartest. No. It comes to those who will do anything to achieve it.”</i>
+                                            </p>
+                                            <a target="_blank"
+                                                href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
+                                                class="card__button">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="card wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="card__thumb">
+                                        <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
+                                        <div class="card__caption">
+                                            <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
+                                            <p class="card__snippet">
+                                                There’s a quote from Arcane that really resonates with me:
+                                                <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
+                                                    smartest. No. It comes to those who will do anything to achieve it.”</i>
+                                            </p>
+                                            <a target="_blank"
+                                                href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
+                                                class="card__button">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="card__thumb">
+                                        <img src="assets/images/Card_images/Silco.jpg" alt="Picture by Screen Rant" class="card__image">
+                                        <div class="card__caption">
+                                            <h2 class="card__title">Strong? Smart? Fast? Nah, Just Too Stubborn to Quit!!</h2>
+                                            <p class="card__snippet">
+                                                There’s a quote from Arcane that really resonates with me:
+                                                <i>“Power, real power, doesn’t come to those who were born strongest, or fastest, or
+                                                    smartest. No. It comes to those who will do anything to achieve it.”</i>
+                                            </p>
+                                            <a target="_blank"
+                                                href="https://medium.com/@callmesandy/strong-smart-fast-nah-just-too-stubborn-to-quit-d5a628b78edc"
+                                                class="card__button">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add as many slides as needed -->
+                        </div>
+                        <!-- Pagination (optional) -->
+                        <br>
+                        <br>
+                        <div class="swiper-pagination"></div>
+                        <!-- Navigation buttons (optional) -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </section>
+
+
+
+
+
+            </div>
         </div>
-    </div>
-    <!-- Blog End -->
-</section>
+        <!-- Blog End -->
+    </section>
 
-<!-- Contact Start -->
-<section id="Contact-section" class="Contact-section">
+    <!-- Contact Start -->
+    <section id="Contact-section" class="Contact-section">
     <div class="contact" id="contact">
-        <div class="container py-5">
+        <div class="container ">
+            <!-- Section Header -->
             <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s" style="padding-bottom: 30px;">
                 <p>It's a Me</p>
                 <h1>Contact</h1>
             </div>
-            <div class="Flex-box">
-                <div class="Contact-card wow fadeInUp" data-wow-delay="0.2s">
+            
+            <div class="row justify-content-center" > 
+            <!-- Contact Content -->
+            <div class="Contact-card wow fadeInUp" data-wow-delay="0.2s">
+                <div class="row">
+                    <!-- Left Side (Heading) -->
                     <div class="col-lg-12">
                         <h1 class="col-lg-12 pt-5 mb-3" style="text-align: left;">
                             <b style="font-size: 100px; color: #658eab">Let's</b>
@@ -864,6 +952,8 @@
                             <b style="font-size: 100px; color:#658eab; position: relative; top: -60px;">Touch</b>
                         </h1>
                     </div>
+
+                    <!-- Right Side (Contact Info) -->
                     <div class="col-lg-8" style="position: relative; top: -100px;">
                         <div class="row g-10">
                             <div class="col-lg-12 wow fadeInLeft" data-wow-delay="0.4s">
@@ -883,111 +973,103 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-
-
-
-                <div class="Form-card">
-                    <div class="Form-control col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.2s"
-                        style="padding-top: 20px;">
-                        <form action="https://formspree.io/f/mpwzerpn" method="POST">
-                            <div class="row g-3">
-                                <div class="col-md-6 pb-3">
-                                    <div class="form-floating">
-                                        <label for="name">Your Name</label>
-                                        <input type="text" class="form-control" id="name" name="name"
-                                            placeholder="Your Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <label for="email">Your Email</label>
-                                        <input type="email" class="form-control" id="email" name="email"
-                                            placeholder="Your Email">
-                                    </div>
-                                </div>
-                                <div class="col-12 pb-3">
-                                    <div class="form-floating">
-                                        <label for="subject">Subject</label>
-                                        <input type="text" class="form-control" id="subject" name="subject"
-                                            placeholder="Subject">
-                                    </div>
-                                </div>
-                                <div class="col-12 pb-3">
-                                    <div class="form-floating">
-                                        <label for="message">Message</label>
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                            name="message" style="height: 100px"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12" style="display: flex; justify-content: right;">
-                                    <button class="main-btn" type="submit">Send Message</button>
+            <!-- Contact Form -->
+            <div class="Form-card">
+                <div class="Form-control col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.2s" style="padding-top: 20px;">
+                    <form action="https://formspree.io/f/mpwzerpn" method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6 pb-3">
+                                <div class="form-floating">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
                                 </div>
                             </div>
-                        </form>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                </div>
+                            </div>
+                            <div class="col-12 pb-3">
+                                <div class="form-floating">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="col-12 pb-3">
+                                <div class="form-floating">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12" style="display: flex; justify-content: right;">
+                                <button class="main-btn" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="col-lg-12 col-md-6 pt-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div style="display: flex; justify-content: center;">
+                        <p class="mt-2 mb-2">OR</p>
                     </div>
-                    <div class="col-lg-12 pt-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div style="display: flex; justify-content: center;">
-                            <p class="mt-2 mb-2">OR</p>
-                        </div>
-                        <p class="mb-3">Follow me:</p>
-                        <div class="social-btns">
-                            <a class="btn instagram" href="https://www.instagram.com/_.sandy.17._/" target="_blank"><i
-                                    class="fa fa-instagram"></i></a>
-                            <a class="btn twitter" href="https://twitter.com/Sandy_enggrr" target="_blank"><i
-                                    class="fa fa-twitter"></i></a>
-                            <a class="btn github" href="https://github.com/Sandy-exe" target="_blank"><i
-                                    class="fa fa-github"></i></a>
-                            <a class="btn linkedin" href="https://www.linkedin.com/in/santhosh-kumar-santhanam/"
-                                target="_blank"><i class="fa fa-linkedin"></i></a>
-                            <a class="btn spotify" href="https://open.spotify.com/user/31eclmlgguf5apjzrd4soucy3it4"
-                                target="_blank"><i class="fa fa-brands fa-spotify"></i></a>
-                        </div>
+                    <p class="mb-3">Follow me:</p>
+                    <div class="social-btns">
+                        <a class="btn instagram" href="https://www.instagram.com/_.sandy.17._/" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a class="btn twitter" href="https://twitter.com/Sandy_enggrr" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a class="btn github" href="https://github.com/Sandy-exe" target="_blank"><i class="fa fa-github"></i></a>
+                        <a class="btn linkedin" href="https://www.linkedin.com/in/santhosh-kumar-santhanam/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn spotify" href="https://open.spotify.com/user/31eclmlgguf5apjzrd4soucy3it4" target="_blank"><i class="fa fa-brands fa-spotify"></i></a>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Contact End -->
+
+    <!-- Contact End -->
 
 
-<!-- Footer Start -->
-<section id="footer-section" class="Footer-section">
-    <footer id="footer" class="footer-area">
-        <div class="footer-widget pt-130 pb-130">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="footer-content text-center pt-3">
-                            <a href="">
-                                <img src="assets/images/Extra_anime/Gojo2.png" alt="Logo" style="width: 200px;">
-                            </a>
-                            <p>Thank you for dropping by my website! Feel free to visit anytime.<br> Let's stay
-                                connected. </p>
-                        </div> <!-- footer content -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- footer widget -->
-        <div class="footer-copyright pb-20">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="copyright-text text-center pt-20">
-                            <p>© Santhosh Kumar S, All Right Reserved</p>
-                        </div> <!-- copyright text -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- footer widget -->
-    </footer>
-    <a class="back-to-top" href="#" target=""><i class="fa fa-chevron-up"></i></a>
-</section>
-<!-- Footer End -->
+    <!-- Footer Start -->
+    <section id="footer-section" class="Footer-section">
+        <footer id="footer" class="footer-area">
+            <div class="footer-widget pt-130 pb-130">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="footer-content text-center pt-3">
+                                <a href="">
+                                    <img src="assets/images/Extra_anime/Gojo2.png" alt="Logo" style="width: 200px;">
+                                </a>
+                                <p>Thank you for dropping by my website! Feel free to visit anytime.<br> Let's stay
+                                    connected. </p>
+                            </div> <!-- footer content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- footer widget -->
+            <div class="footer-copyright pb-20">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="copyright-text text-center pt-20">
+                                <p>© Santhosh Kumar S, All Right Reserved</p>
+                            </div> <!-- copyright text -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- footer widget -->
+        </footer>
+        <a class="back-to-top" href="#" target=""><i class="fa fa-chevron-up"></i></a>
+    </section>
+    <!-- Footer End -->
 
 
-<!-- Back to top button -->
+    <!-- Back to top button -->
 
 
 
@@ -1018,7 +1100,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
+
 
 
     <!-- Template Javascript -->

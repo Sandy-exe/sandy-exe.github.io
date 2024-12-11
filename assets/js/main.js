@@ -15,34 +15,135 @@ document.addEventListener("DOMContentLoaded", () => {
       nextEl: ".swiper-button-next", // Next button
       prevEl: ".swiper-button-prev", // Previous button
     },
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1400: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
   });
-  // Get all filter buttons and portfolio cards
-  const filterButtons = document.querySelectorAll("#portfolio-filter li");
-  const cards = document.querySelectorAll(".portfolio-container .cards");
 
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      // Remove active class from all buttons and add to the clicked button
-      filterButtons.forEach((btn) => btn.classList.remove("filter-active"));
-      button.classList.add("filter-active");
-
-      const filterValue = button.getAttribute("data-filter");
-
-      // Show or hide portfolio cards based on the selected category
-      cards.forEach((card) => {
-        if (
-          filterValue === "*" ||
-          card.classList.contains(filterValue.substring(1))
-        ) {
-          card.style.display = "block"; // Show the card
-          swiper.update();
-        } else {
-          card.style.display = "none"; // Hide the card
-          swiper.update();
-        }
-      });
-    });
+  var swiper1 = new Swiper(".ArticleSwiper", {
+    slidesPerView: 3, // Number of slides visible at once
+    spaceBetween: 30, // Space between slides in pixels
+    pagination: {
+      el: ".swiper-pagination", // Pagination element
+      clickable: true, // Enable clickable pagination
+    },
+    navigation: {
+      nextEl: ".swiper-button-next", // Next button
+      prevEl: ".swiper-button-prev", // Previous button
+    },
+    breakpoints: {
+      // Responsive breakpoints
+      768: {
+        slidesPerView: 1, // On small screens, show 1 slide per view
+      },
+      1024: {
+        slidesPerView: 3, // On medium screens, show 3 slides per view
+      },
+    },
   });
+
+ const filterButtons = document.querySelectorAll("#portfolio-filter li");
+ const slides = document.querySelectorAll(".mySwiper .swiper-wrapper .swiper-slide");
+
+ filterButtons.forEach((button) => {
+   button.addEventListener("click", () => {
+     // Remove active class from all buttons and add to the clicked button
+     filterButtons.forEach((btn) => btn.classList.remove("filter-active"));
+     button.classList.add("filter-active");
+
+     const filterValue = button.getAttribute("data-filter");
+
+     let slidesxcol;
+
+
+     // If filter is "all", show all slides
+     if (filterValue === "*") {
+       slides.forEach((slide) => {
+         const card = slide.querySelector(".cards"); // Get the card inside the slide
+         slide.classList.remove("non-swiper-slide");
+         slide.classList.add("swiper-slide");
+         card.style.setProperty("display", "block", "important");
+       });
+
+       // Reinitialize Swiper based on the number of slides
+       if (slides.length > 6) {
+         slidesxcol = 3;
+       } else {
+         slidesxcol = 1;
+       }
+
+       swiper.destroy();
+       swiper = new Swiper(".mySwiper", {
+         slidesPerView: 3,
+         grid: {
+           rows: 2,
+         },
+         spaceBetween: 30,
+         pagination: {
+           el: ".swiper-pagination",
+           clickable: true,
+         },
+         navigation: {
+           nextEl: ".swiper-button-next", // Next button
+           prevEl: ".swiper-button-prev", // Previous button
+         },
+       });
+     } else {
+       slides.forEach((slide) => {
+         const card = slide.querySelector(".cards"); 
+         console.log(card)// Get the card inside the slide
+         if (card.classList.contains(filterValue.substring(1))) {
+           // Show slide if card matches filter
+           slide.classList.remove("non-swiper-slide");
+           slide.classList.add("swiper-slide");
+           card.style.setProperty("display", "block", "important");
+         } else {
+           // Hide slide if card doesn't match filter
+           slide.classList.add("non-swiper-slide");
+           slide.classList.remove("swiper-slide");
+           card.style.setProperty("display", "none", "important");
+         }
+       });
+
+       // Reinitialize Swiper based on the number of slides
+       if (document.querySelectorAll(".swiper-slide").length > 6) {
+         slidesxcol = 3;
+       } else if ((document.querySelectorAll(".swiper-slide").length <=3)){
+         slidesxcol = 2;
+       } else {
+         slidesxcol = 1;
+       }
+
+       swiper.destroy();
+       swiper = new Swiper(".mySwiper", {
+         slidesPerView: slidesxcol,
+         grid: {
+           rows: 2,
+         },
+         spaceBetween: 30,
+         pagination: {
+           el: ".swiper-pagination",
+           clickable: true,
+         },
+         navigation: {
+           nextEl: ".swiper-button-next", // Next button
+           prevEl: ".swiper-button-prev", // Previous button
+         },
+       });
+     }
+   });
+ });
 });
 
 (function ($) {
@@ -121,32 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  var owl = $(".owl-carousel");
-  owl.owlCarousel({
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 1,
-      },
-      960: {
-        items: 1,
-      },
-      1000: {
-        items: 2,
-      },
-      1200: {
-        items: 2,
-      },
-      1300: {
-        items: 3,
-      },
-    },
-  });
 })(jQuery);
 function change(event, tabName) {
   // Hide all tab contents

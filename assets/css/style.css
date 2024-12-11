@@ -1426,6 +1426,24 @@ body {
   box-shadow: inset 0 0 0 0 #2393ef;
   border-color: #2364ef;
 }
+.swiper-pagination {
+    z-index: 10;
+    color:  #324468;
+
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #324468;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+
+    z-index: 10;
+    color:  #324468;/* Optional background for visibility */
+
+}
+
 
 /*===========================
     6. Blog css 
@@ -1586,7 +1604,7 @@ body {
 
   /* -------- Landing page ------- */
   .card-container {
-    padding: 50px 50px 50px 200px;
+    padding:  50px 50px 200px;
   }
 
 
@@ -1708,10 +1726,7 @@ body {
   vertical-align: middle;
 }
 
-.Flex-box {
-  display: flex;
-  flex-direction: row;
-}
+
 
 .Contact-card {
   width: 600px;
@@ -1743,21 +1758,21 @@ body {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer-widget {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
 @media (max-width: 767px) {
   .footer-widget {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
 .footer-content p {
   color: #fff;
-  margin-top: 35px;
+ 
 }
 
 .footer-content ul {
