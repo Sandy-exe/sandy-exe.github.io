@@ -26,17 +26,23 @@ body {
   overflow-x: hidden;
 }
 
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-fg: #000000;
+}
+/* Force light mode */
 body {
   background-color: #ffffff !important;
+  color: #000000 !important;
 }
 
+/* Override dark mode preferences */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #ffffff !important;
     color: #000000 !important;
   }
 }
-
 html {
   overflow-x: hidden;
 }
