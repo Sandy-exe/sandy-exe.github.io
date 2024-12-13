@@ -676,12 +676,20 @@ p {
     height: auto;
 
 }
+@media (max-width: 1290px)  {
+  .about-me {
+    top: 40px; /* Moves it to the top (relative to its original position) */
+}
+  
+}
+
 
 @media (max-width: 1200px) {
     .about-me {
     top: 30px; /* Moves it to the top (relative to its original position) */
 }
 }
+
 
 @media (max-width: 768px) {
         .about-me {
