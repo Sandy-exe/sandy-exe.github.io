@@ -36,27 +36,6 @@
 </head>
 
 <body>
-    <div class="screen-size">
-        <p id="screenWidth">Screen Width: </p>
-        <p id="screenHeight">Screen Height: </p>
-    </div>
-    <style>
-        .screen-size {
-            text-align: center;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            z-index: 9999;
-            position: fixed;
-        }
-
-        .screen-size p {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-    </style>
-
     <script>
         function updateScreenSize() {
             const screenWidth = window.innerWidth;
@@ -1044,30 +1023,27 @@
                                 <div class="row g-3">
                                     <div class="col-md-6 pb-3">
                                         <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" name="name" placeholder=" ">
                                             <label for="name">Your Name</label>
-                                            <input type="text" class="form-control" id="name" name="name"
-                                                placeholder="Your Name">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder=" ">
                                             <label for="email">Your Email</label>
-                                            <input type="email" class="form-control" id="email" name="email"
-                                                placeholder="Your Email">
                                         </div>
                                     </div>
                                     <div class="col-12 pb-3">
                                         <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" name="subject" placeholder=" ">
                                             <label for="subject">Subject</label>
-                                            <input type="text" class="form-control" id="subject" name="subject"
-                                                placeholder="Subject">
                                         </div>
                                     </div>
                                     <div class="col-12 pb-3">
                                         <div class="form-floating">
+                                            <textarea class="form-control" id="message" name="message" placeholder=" "
+                                                style="height: 100px"></textarea>
                                             <label for="message">Message</label>
-                                            <textarea class="form-control" placeholder="Leave a message here"
-                                                id="message" name="message" style="height: 100px"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-12 pb-3" style="display: flex; justify-content: right;">
@@ -1108,7 +1084,7 @@
     <!-- Footer Start -->
     <section id="footer-section" class="Footer-section">
         <footer id="footer" class="footer-area">
-            <div class="footer-widget mt-4 pt-100 pb-100">
+            <div class="footer-widget mt-4 pb-100">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -1143,8 +1119,6 @@
     <!-- Back to top button -->
 
 
-
-
     <!--====== Main js ======-->
     <!-- <script src="assets/js/main.js"></script> -->
 
@@ -1171,8 +1145,6 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
 
     <!-- Template Javascript -->
     <script src="https://kit.fontawesome.com/2273efbdec.js" crossorigin="anonymous"></script>

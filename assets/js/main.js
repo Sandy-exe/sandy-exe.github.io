@@ -49,12 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".swiper-button-prev", // Previous button
     },
     breakpoints: {
-      // Responsive breakpoints
-      768: {
-        slidesPerView: 1, // On small screens, show 1 slide per view
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 20,
       },
-      1024: {
-        slidesPerView: 3, // On medium screens, show 3 slides per view
+      1052: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
     },
   });
@@ -105,6 +110,20 @@ document.addEventListener("DOMContentLoaded", () => {
             nextEl: ".swiper-button-next", // Next button
             prevEl: ".swiper-button-prev", // Previous button
           },
+          breakpoints: {
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1400: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          },
         });
       } else {
         slides.forEach((slide) => {
@@ -147,8 +166,23 @@ document.addEventListener("DOMContentLoaded", () => {
             nextEl: ".swiper-button-next", // Next button
             prevEl: ".swiper-button-prev", // Previous button
           },
+          breakpoints: {
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            700: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          },
         });
       }
+      window.scrollBy(0, 1);
     });
   });
 });
@@ -224,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
       strings: typed_strings.split(", "),
       typeSpeed: 100,
       backSpeed: 20,
-      smartBackspace: false,
+      smartBackspace: true,
       loop: true,
     });
   }
