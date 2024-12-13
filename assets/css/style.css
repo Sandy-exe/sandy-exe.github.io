@@ -246,15 +246,29 @@ p {
   height: 100%;
   width: 190px;
   background-color: #ffffff; /* White background */
-  color: #324468; /* White text color */
+  color: #324468; /* Sidebar text color */
   z-index: 9999;
   transition: transform 0.3s ease;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for contrast */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  border-radius: 15px;/* Curved left corners */
 }
 
 /* Show sidebar */
 #sidebar.show {
   display: block;
+}
+
+/* Background overlay when sidebar is active */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Darkened background */
+  backdrop-filter: blur(2px); /* Blurring effect */
+  z-index: 9998; /* Slightly below the sidebar */
 }
 
 /* Sidebar close button */
@@ -278,18 +292,6 @@ p {
   position: absolute;
   top: 20px;
   left: 20px;
-}
-
-/* Overlay for mobile */
-.overlay {
-  display: none;
-  /* position: fixed; */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
 }
 
 /* Show overlay when sidebar is open */
