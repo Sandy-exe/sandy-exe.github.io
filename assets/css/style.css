@@ -24,7 +24,10 @@ body {
   font-style: normal;
   color: #8a8fa3;
   overflow-x: hidden;
-  overflow-y: scroll;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 * {
@@ -464,13 +467,15 @@ p {
 @media (max-width: 767px) {
   .header-content .header-shape.Denji img {
     width: 70%;
+    position: relative;
+    left: 40px;
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 766px) {
   .header-content .header-shape.Denji img {
     width: 300px;
-    left: 150px !important;
+    left: 150px;
   }
 }
 
@@ -633,23 +638,57 @@ p {
   border-color: #324468;
 }
 
+
+@media screen and (max-width: 520px) {
+
+    .header-content-right {
+      padding-left: 20px;
+    }
+
+    .header-content-right .title {
+      width: 200px !important;
+    }
+
+    .header-content-right .sub-title {
+      width: 600px !important;
+    }
+    
+    .hero-text {
+      width: 400px !important;
+    }
+
+    .container .header-shape.Denji img {
+      width: 55%;
+      position: relative;
+      left: -20px !important;
+    }
+
+    .header-content-right h2 {
+      font-size: 25px;
+    }
+
+}
+
+
+
 /*===========================
     3. About css 
 ===========================*/
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .about {
-    padding-top: 90px;
+  .about-section {
+
     padding-bottom: 100px;
   }
+
 }
 
 @media (max-width: 767px) {
-  .about {
-    padding-top: 70px;
+  .about-section {
     padding-bottom: 80px;
   }
 }
+
 
 .about-header {
     display: flex;
@@ -683,7 +722,6 @@ p {
   
 }
 
-
 @media (max-width: 1200px) {
     .about-me {
     top: 30px; /* Moves it to the top (relative to its original position) */
@@ -699,6 +737,14 @@ p {
 }
 
 
+@media screen and (max-width: 450px) {
+      .about-me {
+        top: 10px;
+      }
+      .GOJO {
+        right: 40px;
+      }
+}
 
 .about .section-header {
   margin-bottom: 30px;
@@ -784,9 +830,10 @@ p {
 }
 
 .experience .section-header {
-  margin-bottom: 50px;
   font-size: 50px;
+  margin-bottom: 50px;
 }
+
 
 .experience .timeline {
   position: relative;
@@ -1000,6 +1047,26 @@ p {
 }
 
 
+@media screen and (max-width: 500px) {
+
+  .header-flex .section-header h1 {
+    font-size: 55px;
+    
+  }
+
+  .header-flex .section-header {
+    margin-bottom: 20px;
+  }
+
+.header-flex {
+    flex-direction: column;
+    gap: 0px !important;
+    padding-bottom: 40px;
+}
+
+
+
+}
 
 /*===========================
     5. Portfolio css 
@@ -1361,6 +1428,10 @@ body {
   color: #324468; /* Optional background for visibility */
 }
 
+
+
+
+
 /*===========================
     6. Blog css 
 ===========================*/
@@ -1373,8 +1444,8 @@ body {
 .card {
   width: 300px;
   height: 500px;
-  overflow: hidden;
-
+  overflow-x: hidden;
+  overflow-y: visible;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -1428,7 +1499,7 @@ body {
   transition: 0.3s;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 350px) {
   .card__thumb::after {
     top: calc(100% - 140px);
   }
@@ -1450,7 +1521,7 @@ body {
   transition: 0.3s;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 350px) {
   .card__caption {
     top: calc(100% - 110px);
     transform: unset;
@@ -1486,7 +1557,7 @@ body {
   color: white;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 350px) {
   .card__snippet {
     margin: 60px 0;
   }
@@ -1518,6 +1589,23 @@ body {
 /* -------- Landing page ------- */
 .card-container {
   padding: 50px 50px 200px;
+}
+
+@media screen and (max-width: 500px) {
+
+  .card {
+    height: auto;
+    width: 500px;
+  }
+
+  .card__snippet {
+    font-size: 12px;
+  }
+
+  .card__title {
+    font-size: 15px;
+  }
+  
 }
 
 /*===========================
@@ -1663,6 +1751,29 @@ body {
 }
 }
 
+@media screen and (max-width: 500px) {
+
+  .Contact-card {
+    width: 300px !important;
+    height: 400px;
+  }
+
+  .Contact-card h3 {
+    font-size: 17px;
+  }
+
+  .Form-card {
+    width: 300px !important;
+  }
+
+  .Mail h3 {
+    font-size: 15px;
+  }
+  
+  .social-btns {
+    width: 300px;
+  }
+}
 /*===========================
        8. FOOTER css 
 ===========================*/

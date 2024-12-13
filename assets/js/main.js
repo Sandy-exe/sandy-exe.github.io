@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     breakpoints: {
       300: {
         slidesPerView: 1,
-        spaceBetween: 20,
       },
       1024: {
         slidesPerView: 2,
@@ -45,13 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
       clickable: true, // Enable clickable pagination
     },
     navigation: {
-      nextEl: ".swiper-button-next", // Next button
-      prevEl: ".swiper-button-prev", // Previous button
+      nextEl: ".card-container .swiper-button-next", // Next button
+      prevEl: ".card-container .swiper-button-prev", // Previous button
     },
     breakpoints: {
       300: {
         slidesPerView: 1,
-        spaceBetween: 20,
       },
       1052: {
         slidesPerView: 2,
@@ -113,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
           breakpoints: {
             300: {
               slidesPerView: 1,
-              spaceBetween: 20,
+              
             },
             1024: {
               slidesPerView: 2,
@@ -169,7 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
           breakpoints: {
             300: {
               slidesPerView: 1,
-              spaceBetween: 20,
             },
             700: {
               slidesPerView: 2,
