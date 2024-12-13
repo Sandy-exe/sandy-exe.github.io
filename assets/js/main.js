@@ -1,6 +1,12 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
+  const experienceTab = document.getElementById("Exp-Tab");
+  console.log(experienceTab);
+
+  // Trigger the click event on the "Experience" tab to set it as active
+  if (experienceTab) {
+    experienceTab.click();
+  }
+
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     grid: {
@@ -53,97 +59,98 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
- const filterButtons = document.querySelectorAll("#portfolio-filter li");
- const slides = document.querySelectorAll(".mySwiper .swiper-wrapper .swiper-slide");
+  const filterButtons = document.querySelectorAll("#portfolio-filter li");
+  const slides = document.querySelectorAll(
+    ".mySwiper .swiper-wrapper .swiper-slide"
+  );
 
- filterButtons.forEach((button) => {
-   button.addEventListener("click", () => {
-     // Remove active class from all buttons and add to the clicked button
-     filterButtons.forEach((btn) => btn.classList.remove("filter-active"));
-     button.classList.add("filter-active");
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Remove active class from all buttons and add to the clicked button
+      filterButtons.forEach((btn) => btn.classList.remove("filter-active"));
+      button.classList.add("filter-active");
 
-     const filterValue = button.getAttribute("data-filter");
+      const filterValue = button.getAttribute("data-filter");
 
-     let slidesxcol;
+      let slidesxcol;
 
+      // If filter is "all", show all slides
+      if (filterValue === "*") {
+        slides.forEach((slide) => {
+          const card = slide.querySelector(".cards"); // Get the card inside the slide
+          slide.classList.remove("non-swiper-slide");
+          slide.classList.add("swiper-slide");
+          card.style.setProperty("display", "block", "important");
+        });
 
-     // If filter is "all", show all slides
-     if (filterValue === "*") {
-       slides.forEach((slide) => {
-         const card = slide.querySelector(".cards"); // Get the card inside the slide
-         slide.classList.remove("non-swiper-slide");
-         slide.classList.add("swiper-slide");
-         card.style.setProperty("display", "block", "important");
-       });
+        // Reinitialize Swiper based on the number of slides
+        if (slides.length > 6) {
+          slidesxcol = 3;
+        } else {
+          slidesxcol = 1;
+        }
 
-       // Reinitialize Swiper based on the number of slides
-       if (slides.length > 6) {
-         slidesxcol = 3;
-       } else {
-         slidesxcol = 1;
-       }
+        swiper.destroy();
+        swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          grid: {
+            rows: 2,
+          },
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next", // Next button
+            prevEl: ".swiper-button-prev", // Previous button
+          },
+        });
+      } else {
+        slides.forEach((slide) => {
+          const card = slide.querySelector(".cards");
+          console.log(card); // Get the card inside the slide
+          if (card.classList.contains(filterValue.substring(1))) {
+            // Show slide if card matches filter
+            slide.classList.remove("non-swiper-slide");
+            slide.classList.add("swiper-slide");
+            card.style.setProperty("display", "block", "important");
+          } else {
+            // Hide slide if card doesn't match filter
+            slide.classList.add("non-swiper-slide");
+            slide.classList.remove("swiper-slide");
+            card.style.setProperty("display", "none", "important");
+          }
+        });
 
-       swiper.destroy();
-       swiper = new Swiper(".mySwiper", {
-         slidesPerView: 3,
-         grid: {
-           rows: 2,
-         },
-         spaceBetween: 30,
-         pagination: {
-           el: ".swiper-pagination",
-           clickable: true,
-         },
-         navigation: {
-           nextEl: ".swiper-button-next", // Next button
-           prevEl: ".swiper-button-prev", // Previous button
-         },
-       });
-     } else {
-       slides.forEach((slide) => {
-         const card = slide.querySelector(".cards"); 
-         console.log(card)// Get the card inside the slide
-         if (card.classList.contains(filterValue.substring(1))) {
-           // Show slide if card matches filter
-           slide.classList.remove("non-swiper-slide");
-           slide.classList.add("swiper-slide");
-           card.style.setProperty("display", "block", "important");
-         } else {
-           // Hide slide if card doesn't match filter
-           slide.classList.add("non-swiper-slide");
-           slide.classList.remove("swiper-slide");
-           card.style.setProperty("display", "none", "important");
-         }
-       });
+        // Reinitialize Swiper based on the number of slides
+        if (document.querySelectorAll(".swiper-slide").length > 6) {
+          slidesxcol = 3;
+        } else if (document.querySelectorAll(".swiper-slide").length <= 3) {
+          slidesxcol = 2;
+        } else {
+          slidesxcol = 1;
+        }
 
-       // Reinitialize Swiper based on the number of slides
-       if (document.querySelectorAll(".swiper-slide").length > 6) {
-         slidesxcol = 3;
-       } else if ((document.querySelectorAll(".swiper-slide").length <=3)){
-         slidesxcol = 2;
-       } else {
-         slidesxcol = 1;
-       }
-
-       swiper.destroy();
-       swiper = new Swiper(".mySwiper", {
-         slidesPerView: slidesxcol,
-         grid: {
-           rows: 2,
-         },
-         spaceBetween: 30,
-         pagination: {
-           el: ".swiper-pagination",
-           clickable: true,
-         },
-         navigation: {
-           nextEl: ".swiper-button-next", // Next button
-           prevEl: ".swiper-button-prev", // Previous button
-         },
-       });
-     }
-   });
- });
+        swiper.destroy();
+        swiper = new Swiper(".mySwiper", {
+          slidesPerView: slidesxcol,
+          grid: {
+            rows: 2,
+          },
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next", // Next button
+            prevEl: ".swiper-button-prev", // Previous button
+          },
+        });
+      }
+    });
+  });
 });
 
 (function ($) {
@@ -221,26 +228,41 @@ document.addEventListener("DOMContentLoaded", () => {
       loop: true,
     });
   }
-
 })(jQuery);
+
+let activeTab = "experience"; // Default active tab
+
 function change(event, tabName) {
   // Hide all tab contents
   const experiences = document.querySelectorAll(".experience");
+
   experiences.forEach((content) => {
     content.style.display = "none";
   });
 
-  // Highlight the active tab
+  document.getElementById(tabName).style.display = "block";
+
+  // Reset background color and transform for all tab links
   const tabLinks = document.querySelectorAll(".tablinks");
   tabLinks.forEach((tab) => {
-    tab.classList.remove("active"); // Remove active class from all tabs
+    tab.style.backgroundColor = ""; // Reset background color
+    tab.style.transform = ""; // Reset transform
   });
 
-  // Show the selected tab content and mark the tab as active
-  document.getElementById(tabName).style.display = "block";
-  event.currentTarget.classList.add("active"); // Add active class to the clicked tab
+  let clickedTab;
 
-  // Optional: Scroll to ensure active tab is visible
+  // Find the clicked tab element
+  if (tabName == "experience") {
+    clickedTab = document.querySelector("#experience #Exp-Tab");
+  } else {
+    clickedTab = document.querySelector("#education #Edu-Tab");
+  }
+
+  // Apply active styles to the clicked tab
+  clickedTab.style.backgroundColor = "#324468"; // Active tab background color
+  clickedTab.style.transform = "translateY(0)"; // Remove hover effect (optional)
+
+  // Optional: Scroll to ensure the active tab is visible
   window.scrollBy(0, 1);
 }
 

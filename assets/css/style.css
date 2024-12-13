@@ -24,6 +24,7 @@ body {
   font-style: normal;
   color: #8a8fa3;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 * {
@@ -167,20 +168,6 @@ p {
   border-color: #324468;
 }
 
-/*===== All Section Title Style =====*/
-.section-title .title {
-  font-weight: 700;
-  font-size: 45px;
-  color: #000;
-  padding-bottom: 20px;
-}
-
-@media (max-width: 767px) {
-  .section-title .title {
-    font-size: 30px;
-  }
-}
-
 /*===========================
     2.HEADER css 
 ===========================*/
@@ -197,7 +184,8 @@ p {
   transition: all 0.4s ease-out 0s;
 }
 
-.navigation.sticky {  padding: 2px ;
+.navigation.sticky {
+  padding: 2px;
   position: fixed;
   -webkit-transition: all 0.4s ease-out 0s;
   -moz-transition: all 0.4s ease-out 0s;
@@ -216,7 +204,6 @@ p {
   padding-bottom: 5px;
 }
 
-
 .navigation .navbar .navbar-nav .nav-item {
   margin-left: 30px;
 }
@@ -227,125 +214,117 @@ p {
   }
 }
 
-
 /* General Styling */
 /* Default sidebar is hidden on mobile */
 #sidebar {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 190px;
-    background-color: #ffffff; /* White background */
-    color: #324468; /* White text color */
-    z-index: 9999;
-    transition: transform 0.3s ease;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for contrast */
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 190px;
+  background-color: #ffffff; /* White background */
+  color: #324468; /* White text color */
+  z-index: 9999;
+  transition: transform 0.3s ease;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for contrast */
 }
 
 /* Show sidebar */
 #sidebar.show {
-    display: block;
+  display: block;
 }
 
 /* Sidebar close button */
 .close-btn {
-    background: none;
-    color: #333333; /* Dark color for the close button to be visible on white background */
-    font-size: 2rem;
-    border: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
+  background: none;
+  color: #333333; /* Dark color for the close button to be visible on white background */
+  font-size: 2rem;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 /* Menu toggle button for mobile */
 .sidebar-toggle {
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #333333; /* Dark color for the toggle button to be visible on white background */
-    position: absolute;
-    top: 20px;
-    left: 20px;
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #333333; /* Dark color for the toggle button to be visible on white background */
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 /* Overlay for mobile */
 .overlay {
-    display: none;
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+  display: none;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 /* Show overlay when sidebar is open */
 #overlay.show {
-    display: block;
+  display: block;
 }
 
 /* Media query for mobile (small screen) */
 @media (max-width: 768px) {
-    /* Show the menu button on mobile */
-    .sidebar-toggle {
-        display: block;
-    }
+  /* Show the menu button on mobile */
+  .sidebar-toggle {
+    display: block;
+  }
 
-    /* Hide the sidebar by default on mobile */
-    #sidebar {
-        transform: translateX(100%); /* Slide the sidebar from the right */
-    }
+  /* Hide the sidebar by default on mobile */
+  #sidebar {
+    transform: translateX(100%); /* Slide the sidebar from the right */
+  }
 
-    /* Slide the sidebar in on mobile */
-    #sidebar.show {
-        transform: translateX(0);
-    }
+  /* Slide the sidebar in on mobile */
+  #sidebar.show {
+    transform: translateX(0);
+  }
 
-    /* Add some margin to the body when the sidebar is open */
-    body {
-        overflow: hidden;
-    }
 }
-
 
 /* Sidebar navigation items */
 .sidebar-nav {
-    list-style: none;
-    padding: 0;
-    margin-top: 60px; /* Adjust depending on your sidebar height */
+  list-style: none;
+  padding: 0;
+  margin-top: 60px; /* Adjust depending on your sidebar height */
 }
 
 .sidebar-nav .nav-item {
-    padding: 15px 20px;
-    border-bottom: 1px solid #f0f0f0; /* Adds a subtle separation between items */
+  padding: 15px 20px;
+  border-bottom: 1px solid #f0f0f0; /* Adds a subtle separation between items */
 }
 
 .sidebar-nav .nav-item a {
-    color: #ffffff; /* White text color */
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: block;
-    transition: color 0.3s ease;
+  color: #ffffff; /* White text color */
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  transition: color 0.3s ease;
 }
 
 /* Hover effect for navigation links */
 .sidebar-nav a:hover {
-    color: #180a5f; /* Dark color on hover for contrast */
+  color: #180a5f; /* Dark color on hover for contrast */
 }
-
 
 /* Mobile Styling */
 @media (max-width: 991px) {
-    .navbar-nav {
-        display: none; /* Hide top menu */
-    }
+  .navbar-nav {
+    display: none; /* Hide top menu */
+  }
 }
-
 
 @media (max-width: 767px) {
   .navigation .navbar .navbar-nav .nav-item {
@@ -412,7 +391,6 @@ p {
   height: 45px;
 }
 
-
 .header-content {
   height: 730px;
   width: 100%;
@@ -452,8 +430,7 @@ p {
 
 .container {
   position: relative;
-  left: -10px;
-  width: 100%;                 /* Take up full width of the parent */
+  width: 100%; /* Take up full width of the parent */
   height: 100%;
 }
 
@@ -465,95 +442,6 @@ p {
 @media (max-width: 767px) {
   .header-content .header-shape.lines45 img {
     width: 40px;
-  }
-}
-
-.header-content .header-shape.shape-tow {
-  top: -18px !important;
-  left: 20% !important;
-}
-
-@media (max-width: 767px) {
-  .header-content .header-shape.shape-tow img {
-    width: 40px;
-  }
-}
-
-.header-content .header-shape.shape-three {
-  top: 0 !important;
-  left: 40% !important;
-}
-
-@media (max-width: 767px) {
-  .header-content .header-shape.shape-three img {
-    width: 100px;
-  }
-}
-
-.header-content .header-shape.shape-fore {
-  top: 28px !important;
-  right: 7.6% !important;
-  left: auto !important;
-}
-
-@media (max-width: 767px) {
-  .header-content .header-shape.shape-fore img {
-    width: 40px;
-  }
-}
-
-.header-content .header-shape.shape-five {
-  right: 30px !important;
-  bottom: 35% !important;
-  left: auto !important;
-  top: auto !important;
-}
-
-@media (max-width: 767px) {
-  .header-content .header-shape.shape-five {
-    right: 20px !important;
-    bottom: 48% !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .header-content .header-shape.shape-five img {
-    width: 40px;
-  }
-}
-
-.header-content .header-shape.shape-six {
-  top: 44% !important;
-  left: 13% !important;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-@media (max-width: 767px) {
-  .header-content .header-shape.shape-six img {
-    width: 40px;
-  }
-}
-
-.header-content .header-shape.shape-seven {
-  left: 30px !important;
-  bottom: 50px !important;
-  top: auto !important;
-}
-
-@media (max-width: 767px) {
-  .header-content .header-shape.shape-seven {
-    left: 15px !important;
-    bottom: 25px !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .header-content .header-shape.shape-seven img {
-    width: 100px;
   }
 }
 
@@ -573,31 +461,20 @@ p {
 
 @media (max-width: 767px) {
   .header-content .header-shape.Denji img {
-    width: 50%;
+    width: 70%;
   }
 }
 
-.header-content .header-shape.shape-nine {
-  left: 50% !important;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 28px !important;
-  top: auto !important;
-}
-
-@media (max-width: 767px) {
-  .header-content .header-shape.shape-nine {
-    left: 65% !important;
-    bottom: 20px !important;
+@media only screen and (min-width: 600px) and (max-width: 766px) {
+  .header-content .header-shape.Denji img {
+    width: 300px;
+    left: 150px !important;
   }
 }
 
-@media (max-width: 767px) {
-  .header-content .header-shape.shape-nine img {
-    width: 100px;
+@media only screen and (min-width: 1200px) and (max-width: 1280px) {
+  .header-content .header-shape.Denji img {
+   width: 85%;
   }
 }
 
@@ -626,25 +503,30 @@ p {
   }
 }
 
+@media only screen and (min-width: 1200px) and (max-width: 1280px) {
+  .header-content .header-shape.Denji img {
+   left: 10px !important;
+  }
+}
+
 .header-content-right {
   position: relative;
   right: 100px;
 }
 
-
 .header-content-right h2 {
-    display: inline-block;
-    margin: 0;
-    height: 35px;
-    color: #324468;
-    font-size: 35px;
-    font-weight: 600;
+  display: inline-block;
+  margin: 0;
+  height: 35px;
+  color: #324468;
+  font-size: 35px;
+  font-weight: 600;
 }
 
 .header-content-right .typed-cursor {
-    font-size: 35px;
-    font-weight: 300;
-    color: #324468;
+  font-size: 35px;
+  font-weight: 300;
+  color: #324468;
 }
 
 .header-content-right .sub-title {
@@ -667,8 +549,17 @@ p {
 }
 
 @media (max-width: 767px) {
+  .header-content-right {
+    padding-top: 50px;
+  }
   .header-content-right .title {
     font-size: 38px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header-content-right {
+    padding-top: 50px;
   }
 }
 
@@ -758,52 +649,58 @@ p {
   }
 }
 
-.about {
-  position: relative;
-  width: 100%;
-  margin: -45px 0 45px 0;
-}
-
 .about-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
-  font-size: 50px;
-  gap: 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-bottom: 40px;
 }
 
 .about-me {
-  position: relative;
-  bottom: -70px;
+    position: relative; /* Relative positioning for the text block */
+    text-align: left;
+    top: 90px; /* Moves it to the top (relative to its original position) */
+   /* Moves it to the left (relative to its original position) */
+    max-height: 150px;
 }
 
 .GOJO {
-  position: relative;
-  bottom: 3px;
-  right: 270px;
+    position: relative;
+    right: 60px;
 }
 
-.about .col-lg-6 {
-  padding: 0;
+.GOJO img {
+    width: 150px;
+    height: auto;
+
 }
+
+@media (max-width: 1200px) {
+    .about-me {
+    top: 30px; /* Moves it to the top (relative to its original position) */
+}
+}
+
+@media (max-width: 768px) {
+        .about-me {
+
+    top: 90px; /* Moves it to the top (relative to its original position) */
+}
+}
+
+
+
 
 .about .section-header {
   margin-bottom: 30px;
 }
 
 .about .about-img {
+  max-width: 700px;
   position: relative;
   padding-left: 70px;
-  width: 700px;
 }
 
-.about .about-img img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .about .about-content {
   padding: 0 60px;
@@ -868,7 +765,8 @@ p {
 
 .experience .timeline {
   position: relative;
-  width: 100%;
+  width: 80%;
+  justify-self: center;
 }
 
 .experience .timeline::after {
@@ -1035,17 +933,28 @@ p {
 
 /*Scroll bar to Change from exp to education*/
 
-.tab {
-  position: relative;
-  bottom: 0px;
-  top: 50px;
-  left: 1300px;
-  z-index: 10;
+
+.header-flex {
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Aligns the items to the start (left) */
+    align-items: center; /* Vertically centers the items */
+    gap: 40px; /* Adds space between the header and the slider */
+    position: relative;
+}
+
+.section-header {
+    text-align: center; /* Centers the text in the header */
 }
 
 .Slider {
-  height: 0px;
+    display: flex; /* Enables flexbox layout inside Slider */
+    align-items: center; /* Vertically centers the content */
 }
+
+.tab {
+    display: flex; /* Flexbox layout for the tab links */
+    flex-direction: column; /* Stacks the tabs vertically */
+  }
 
 .tablinks {
   background-color: #379adb;
@@ -1063,25 +972,11 @@ p {
   transform: translateY(-5px);
 }
 
-/* Active tab styles */
-.tablinks.active {
-  background-color: #324468; /* Active tab background color */
-  transform: translateY(0);  /* Remove the hover effect */
-}
 
-.Levi-kicking {
-  position: relative;
-  bottom: 220px;
-  width: 300px;
-  left: 250px;
-  transition: transform 0.8s;
-}
 
 /*===========================
     5. Portfolio css 
 ===========================*/
-
-
 
 body {
   font-family: Arial, sans-serif;
@@ -1089,33 +984,31 @@ body {
   padding: 0;
 }
 
-
 .cards-container {
   display: flex;
   flex-wrap: nowrap;
   transition: transform 0.5s ease;
 }
 .swiper {
-            width: 100%;
-            height: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 20px;
-            /* Adjust the value as needed */
-            padding-right: 20px;
-            /* Adjust the value as needed */
-        }
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  /* Adjust the value as needed */
+  padding-right: 20px;
+  /* Adjust the value as needed */
+}
 
 .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-     
-            
-            /* Center slide text vertically */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .card {
   width: 150px;
@@ -1171,7 +1064,8 @@ body {
     font-size: 16px; /* Slightly smaller font */
   }
 
-  #previous-btn, #next-btn {
+  #previous-btn,
+  #next-btn {
     top: 45%; /* Adjust the vertical position slightly */
   }
 }
@@ -1183,7 +1077,8 @@ body {
     font-size: 14px; /* Smaller font size */
   }
 
-  #previous-btn, #next-btn {
+  #previous-btn,
+  #next-btn {
     top: 40%; /* Adjust button vertical positioning */
   }
 }
@@ -1195,20 +1090,18 @@ body {
     font-size: 12px; /* Even smaller font size */
   }
 
-  #previous-btn, #next-btn {
+  #previous-btn,
+  #next-btn {
     top: 35%; /* Further adjust vertical position */
   }
 }
 
 .portfolio-container {
-
   width: 80%; /* Adjust to your desired width */
-    height: 800px; /* Adjust to your desired height */
-    margin: 0 auto; /* Centers the container horizontally */
-    overflow: hidden; /* Prevents overflowing content */
-
+  height: 800px; /* Adjust to your desired height */
+  margin: 0 auto; /* Centers the container horizontally */
+  overflow: hidden; /* Prevents overflowing content */
 }
-
 
 :root {
   --surface-color: #fff;
@@ -1427,23 +1320,19 @@ body {
   border-color: #2364ef;
 }
 .swiper-pagination {
-    z-index: 10;
-    color:  #324468;
-
+  z-index: 10;
+  color: #324468;
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: #324468;
+  background: #324468;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-
-    z-index: 10;
-    color:  #324468;/* Optional background for visibility */
-
+  z-index: 10;
+  color: #324468; /* Optional background for visibility */
 }
-
 
 /*===========================
     6. Blog css 
@@ -1453,7 +1342,6 @@ body {
   padding-bottom: 40px;
   background-color: #fbfbfb;
 }
-
 
 .card {
   width: 300px;
@@ -1472,7 +1360,6 @@ body {
 .card:hover .card__image {
   transform: scale(1.2);
 }
-
 
 .card:hover .card__thumb::after {
   top: 0;
@@ -1521,7 +1408,7 @@ body {
 }
 
 .card__image {
- /* Ensures the image fills the container */
+  /* Ensures the image fills the container */
   transition: 0.5s ease-in-out;
 }
 
@@ -1595,18 +1482,16 @@ body {
   background-color: white;
 }
 
-
 .card-container .owl-theme.custom-carousel .owl-dots {
   margin-top: 20px;
   position: relative;
   z-index: 5;
 }
 
-  /* -------- Landing page ------- */
-  .card-container {
-    padding:  50px 50px 200px;
-  }
-
+/* -------- Landing page ------- */
+.card-container {
+  padding: 50px 50px 200px;
+}
 
 /*===========================
     7. Contact css 
@@ -1726,8 +1611,6 @@ body {
   vertical-align: middle;
 }
 
-
-
 .Contact-card {
   width: 600px;
   height: 570px;
@@ -1758,7 +1641,7 @@ body {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer-widget {
-    padding-top: 30px;
+
     padding-bottom: 30px;
   }
 }
@@ -1770,46 +1653,13 @@ body {
   }
 }
 
-.footer-content p {
-  color: #fff;
- 
-}
 
-.footer-content ul {
-  margin-top: 35px;
-}
 
-.footer-content ul li {
-  display: inline-block;
-  margin: 0 14px;
-}
 
-@media (max-width: 767px) {
-  .footer-content ul li {
-    margin: 0 7px;
-  }
-}
 
-@media (max-width: 767px) {
-  .footer-content ul li a {
-    width: 52px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 20px;
-  }
-}
-
-.footer-content ul li a:hover {
-  background-color: #324468;
-  color: #fff;
-}
 
 .footer-copyright {
   background-color: #1c2940;
-}
-
-.footer-copyright .copyright-text p {
-  color: #fff;
 }
 
 .back-to-top {
