@@ -26,6 +26,17 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  background-color: #ffffff !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+}
+
 html {
   overflow-x: hidden;
 }
@@ -296,7 +307,6 @@ p {
   #sidebar.show {
     transform: translateX(0);
   }
-
 }
 
 /* Sidebar navigation items */
@@ -481,7 +491,7 @@ p {
 
 @media only screen and (min-width: 1200px) and (max-width: 1280px) {
   .header-content .header-shape.Denji img {
-   width: 85%;
+    width: 85%;
   }
 }
 
@@ -512,7 +522,7 @@ p {
 
 @media only screen and (min-width: 1200px) and (max-width: 1280px) {
   .header-content .header-shape.Denji img {
-   left: 10px !important;
+    left: 10px !important;
   }
 }
 
@@ -638,38 +648,33 @@ p {
   border-color: #324468;
 }
 
-
 @media screen and (max-width: 520px) {
+  .header-content-right {
+    padding-left: 20px;
+  }
 
-    .header-content-right {
-      padding-left: 20px;
-    }
+  .header-content-right .title {
+    width: 200px !important;
+  }
 
-    .header-content-right .title {
-      width: 200px !important;
-    }
+  .header-content-right .sub-title {
+    width: 600px !important;
+  }
 
-    .header-content-right .sub-title {
-      width: 600px !important;
-    }
-    
-    .hero-text {
-      width: 400px !important;
-    }
+  .hero-text {
+    width: 400px !important;
+  }
 
-    .container .header-shape.Denji img {
-      width: 55%;
-      position: relative;
-      left: -20px !important;
-    }
+  .container .header-shape.Denji img {
+    width: 55%;
+    position: relative;
+    left: -20px !important;
+  }
 
-    .header-content-right h2 {
-      font-size: 25px;
-    }
-
+  .header-content-right h2 {
+    font-size: 25px;
+  }
 }
-
-
 
 /*===========================
     3. About css 
@@ -677,10 +682,8 @@ p {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .about-section {
-
     padding-bottom: 100px;
   }
-
 }
 
 @media (max-width: 767px) {
@@ -689,61 +692,55 @@ p {
   }
 }
 
-
 .about-header {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    padding-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-bottom: 40px;
 }
 
 .about-me {
-    position: relative; /* Relative positioning for the text block */
-    text-align: left;
-    top: 90px; /* Moves it to the top (relative to its original position) */
-   /* Moves it to the left (relative to its original position) */
-    max-height: 150px;
+  position: relative; /* Relative positioning for the text block */
+  text-align: left;
+  top: 90px; /* Moves it to the top (relative to its original position) */
+  /* Moves it to the left (relative to its original position) */
+  max-height: 150px;
 }
 
 .GOJO {
-    position: relative;
-    right: 60px;
+  position: relative;
+  right: 60px;
 }
 
 .GOJO img {
-    width: 150px;
-    height: auto;
-
+  width: 150px;
+  height: auto;
 }
-@media (max-width: 1290px)  {
+@media (max-width: 1290px) {
   .about-me {
     top: 40px; /* Moves it to the top (relative to its original position) */
-}
-  
+  }
 }
 
 @media (max-width: 1200px) {
-    .about-me {
+  .about-me {
     top: 30px; /* Moves it to the top (relative to its original position) */
+  }
 }
-}
-
 
 @media (max-width: 768px) {
-        .about-me {
-
+  .about-me {
     top: 90px; /* Moves it to the top (relative to its original position) */
+  }
 }
-}
-
 
 @media screen and (max-width: 450px) {
-      .about-me {
-        top: 10px;
-      }
-      .GOJO {
-        right: 40px;
-      }
+  .about-me {
+    top: 10px;
+  }
+  .GOJO {
+    right: 40px;
+  }
 }
 
 .about .section-header {
@@ -755,7 +752,6 @@ p {
   position: relative;
   /* padding-left: 70px; */
 }
-
 
 .about .about-content {
   padding: 0 60px;
@@ -792,9 +788,7 @@ p {
     padding-top: 70px;
     padding-bottom: 80px;
   }
-
 }
-
 
 .about .skill-name p:last-child {
   float: right;
@@ -833,7 +827,6 @@ p {
   font-size: 50px;
   margin-bottom: 50px;
 }
-
 
 .experience .timeline {
   position: relative;
@@ -1005,30 +998,29 @@ p {
 
 /*Scroll bar to Change from exp to education*/
 
-
 .header-flex {
-    display: flex; /* Enables flexbox layout */
-    justify-content: center; /* Aligns the items to the start (left) */
-    align-items: center; /* Vertically centers the items */
-    gap: 10px; /* Adds space between the header and the slider */
-    position: relative;
-    padding-left: 40px;
-    padding-right: 40px;
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Aligns the items to the start (left) */
+  align-items: center; /* Vertically centers the items */
+  gap: 10px; /* Adds space between the header and the slider */
+  position: relative;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .section-header {
-    text-align: center; /* Centers the text in the header */
+  text-align: center; /* Centers the text in the header */
 }
 
 .Slider {
-    display: flex; /* Enables flexbox layout inside Slider */
-    align-items: center; /* Vertically centers the content */
+  display: flex; /* Enables flexbox layout inside Slider */
+  align-items: center; /* Vertically centers the content */
 }
 
 .tab {
-    display: flex; /* Flexbox layout for the tab links */
-    flex-direction: column; /* Stacks the tabs vertically */
-  }
+  display: flex; /* Flexbox layout for the tab links */
+  flex-direction: column; /* Stacks the tabs vertically */
+}
 
 .tablinks {
   background-color: #379adb;
@@ -1046,26 +1038,20 @@ p {
   transform: translateY(-5px);
 }
 
-
 @media screen and (max-width: 500px) {
-
   .header-flex .section-header h1 {
     font-size: 55px;
-    
   }
 
   .header-flex .section-header {
     margin-bottom: 20px;
   }
 
-.header-flex {
+  .header-flex {
     flex-direction: column;
     gap: 0px !important;
     padding-bottom: 40px;
-}
-
-
-
+  }
 }
 
 /*===========================
@@ -1428,10 +1414,6 @@ body {
   color: #324468; /* Optional background for visibility */
 }
 
-
-
-
-
 /*===========================
     6. Blog css 
 ===========================*/
@@ -1592,7 +1574,6 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-
   .card {
     height: auto;
     width: 500px;
@@ -1605,7 +1586,6 @@ body {
   .card__title {
     font-size: 15px;
   }
-  
 }
 
 /*===========================
@@ -1746,13 +1726,12 @@ body {
 }
 
 @media (max-width: 1280px) {
-#Contact-section {
-  padding-bottom: 210px; /* Adjust the value as needed */
-}
+  #Contact-section {
+    padding-bottom: 210px; /* Adjust the value as needed */
+  }
 }
 
 @media screen and (max-width: 500px) {
-
   .Contact-card {
     width: 300px !important;
     height: 400px;
@@ -1769,7 +1748,7 @@ body {
   .Mail h3 {
     font-size: 15px;
   }
-  
+
   .social-btns {
     width: 300px;
   }
@@ -1785,7 +1764,6 @@ body {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer-widget {
-
     padding-bottom: 30px;
   }
 }
