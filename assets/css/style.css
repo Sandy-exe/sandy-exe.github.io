@@ -252,7 +252,7 @@ p {
   height: 100%;
   width: 190px;
   background-color: #ffffff; /* White background */
-  color: #324468; /* Sidebar text color */
+  color: #46393f; /* Sidebar text color */
   z-index: 9999;
   transition: transform 0.3s ease;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
@@ -345,7 +345,7 @@ p {
 
 /* Hover effect for navigation links */
 .sidebar-nav a:hover {
-  color: #180a5f; /* Dark color on hover for contrast */
+  color: #46393f; /* Dark color on hover for contrast */
 }
 
 /* Mobile Styling */
@@ -1329,7 +1329,7 @@ body {
   margin-right: 10px; /* Space between the text and arrow */
   font-size: 16px;
   font-weight: bold;
-  color: #000;
+  color: #6a515e;
 }
 
 /* Arrow positioning */
@@ -1346,8 +1346,8 @@ body {
 
   width: 15px;
   height: 15px;
-  border-bottom: 3px solid rgb(0, 0, 0);
-  border-right: 3px solid rgb(0, 0, 0);
+  border-bottom: 3px solid #6a515e;
+  border-right: 3px solid #6a515e;
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
@@ -1467,9 +1467,7 @@ body {
   transition: 0.5s;
 }
 
-.portfolio .portfolio-item:hover img {
-  margin-left: 15px;
-}
+
 
 .portfolio .portfolio-text {
   position: relative;
