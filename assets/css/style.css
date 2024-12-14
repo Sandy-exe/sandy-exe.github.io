@@ -193,6 +193,12 @@ p {
 /*===========================
     2.HEADER css 
 ===========================*/
+
+#home-section {
+  padding-top: 70px;  
+
+}
+
 .navigation {
   -webkit-box-shadow: 0px 0px 29px 0px rgba(134, 134, 134, 0.25);
   -moz-box-shadow: 0px 0px 29px 0px rgba(134, 134, 134, 0.25);

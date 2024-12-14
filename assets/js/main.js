@@ -201,13 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
   new WOW().init();
 
   // Sticky Navbar
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 0) {
-      $(".navigation").addClass("sticky fixed-top");
-    } else {
-      $(".navigation").removeClass("sticky fixed-top");
-    }
-  });
+
 
   // Back to top button
   $(window).scroll(function () {
