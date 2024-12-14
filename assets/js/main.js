@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   const experienceTab = document.getElementById("Exp-Tab");
   console.log(experienceTab);
 
@@ -111,7 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
           breakpoints: {
             300: {
               slidesPerView: 1,
-              
             },
             1024: {
               slidesPerView: 2,
