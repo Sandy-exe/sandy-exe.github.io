@@ -28,11 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       1024: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 30,
       },
       1400: {
         slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 30,
       },
     },
   });
@@ -115,11 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             1024: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              spaceBetween: 30,
             },
             1400: {
               slidesPerView: 3,
-              spaceBetween: 20,
+              spaceBetween: 30,
             },
           },
         });
@@ -170,11 +170,11 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             700: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              spaceBetween: 30,
             },
             1200: {
               slidesPerView: 3,
-              spaceBetween: 20,
+              spaceBetween: 30,
             },
           },
         });
