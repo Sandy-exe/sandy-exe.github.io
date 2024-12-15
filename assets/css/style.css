@@ -656,11 +656,6 @@ p {
   text-align: center;
 }
 
-.header-social .header-social-icon ul li a:hover {
-  color: #fff;
-  background-color: #324468;
-  border-color: #324468;
-}
 
 @media screen and (max-width: 520px) {
   .header-content-right {
@@ -1083,11 +1078,15 @@ body {
   flex-wrap: nowrap;
   transition: transform 0.5s ease;
 }
+
+
+
 .swiper {
   width: 100%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 30px;
   padding-left: 20px;
   /* Adjust the value as needed */
   padding-right: 20px;
@@ -1097,7 +1096,6 @@ body {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -1380,6 +1378,14 @@ body {
     left: 75px; /* Applies to screens up to 540px */
   }
 
+  .card_title {
+     font-size: 14px;
+  }
+
+  .card_status {
+    font-size: 12px;
+  }
+
   .more-info {
     font-size: 14px;
   }
@@ -1559,19 +1565,7 @@ body {
 
 .card__thumb {
   position: relative;
-  max-height: 500px;
   overflow: hidden;
-}
-
-.card__thumb::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  transition: 0.3s;
 }
 
 .card__thumb::after {
@@ -1684,7 +1678,11 @@ body {
 @media screen and (max-width: 500px) {
   .card {
     height: auto;
-    width: 500px;
+    width: 350px;
+  }
+
+  .card__image{
+    width: 450px;
   }
 
   .card__snippet {
@@ -1756,6 +1754,39 @@ body {
   bottom: 30%;
 }
 
+.social-btns .btn.medium:before {
+  background-color: #171515;
+}
+
+.social-btns .btn.medium .fa {
+  color: #171515;
+  position: relative;
+  bottom: 30%;
+}
+
+.social-btns .btn.fiver:before {
+  background-color: #20C075;
+}
+.social-btns .btn.fiver:after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Start in the center */
+  left: 50%;
+  width: 60%; /* Adjust image size */
+  height: 60%; /* Maintain aspect ratio */
+  
+  background-repeat: no-repeat;
+  background-size: contain; /* Ensure the image scales properly */
+  background-position: center;
+  transform: translate(-50%, -50%) scale(1); /* Center and keep original size */
+  transition: transform 0.3s ease; /* Add smooth scaling */
+}
+
+.social-btns .btn.fiver:hover:after {
+  background-image: url("../../assets/images/icons/fiver_white.svg");
+  transform: translate(-50%, -50%) scale(1.2); /* Reduce size on hover */
+}
+
 .social-btns .btn.linkedin:before {
   background-color: #0072b1;
 }
@@ -1778,9 +1809,26 @@ body {
   transform: scale(1.2);
 }
 
+.fiver-icon {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../assets/images/icons/fiver.svg");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease;
+  position: relative;
+  top: 10px;
+}
+
+.fiver:focus .fiver
+.fiver:hover .fiver-icon {
+  background-color: white;
+  background-image: url("");
+}
+
 .social-btns {
   height: 90px;
-  width: 500px;
+  width: 600px;
   margin: auto;
   font-size: 0;
   text-align: left;
@@ -1793,6 +1841,7 @@ body {
   height: 70px;
   line-height: 90px;
   margin: 0 10px;
+  margin-bottom: 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -1839,10 +1888,10 @@ body {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 580px) {
   .Contact-card {
     width: 300px !important;
-    height: 400px;
+    height: 340px;
   }
 
   .Contact-card h3 {
@@ -1851,6 +1900,8 @@ body {
 
   .Form-card {
     width: 300px !important;
+    height: 500px ;
+
   }
 
   .Mail h3 {

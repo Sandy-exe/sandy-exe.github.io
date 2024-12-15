@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   $(".back-to-top").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
+    $("html, body").animate({ scrollTop: 0 }, 2000, "easeInOutExpo");
     return false;
   });
 
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           scrollTop: $(this.hash).offset().top - 45,
         },
-        1500,
+        2000,
         "easeInOutExpo"
       );
 
@@ -298,3 +298,47 @@ function toggleSidebar() {
   sidebar.classList.toggle("show");
   overlay.classList.toggle("show");
 }
+
+// Select all the social media icons
+const socialIcons = document.querySelectorAll('.header-social .header-social-icon ul li a');
+
+// Define the hover colors
+const hoverStyles = {
+  color: '#fff',
+  backgroundColor: '#324468',
+  borderColor: '#324468',
+};
+
+// Define the default styles
+const defaultStyles = {
+  color: '#ccc',
+  backgroundColor: 'transparent',
+  borderColor: '#ccc',
+};
+
+// Function to apply styles with transition
+function applyStylesWithTransition(element, styles) {
+  element.style.transition = 'all 0.7s ease';
+  for (const [key, value] of Object.entries(styles)) {
+    element.style[key] = value;
+  }
+}
+
+// Function to iterate through icons and apply hover effect
+function startIterativeHoverEffect() {
+  let index = 0;
+
+  setInterval(() => {
+    // Reset all icons to default styles
+    socialIcons.forEach(icon => applyStylesWithTransition(icon, defaultStyles));
+
+    // Apply hover styles to the current icon
+    applyStylesWithTransition(socialIcons[index], hoverStyles);
+
+    // Move to the next icon
+    index = (index + 1) % socialIcons.length;
+  }, 1750); // Adjust the delay as needed (2 seconds here)
+}
+
+// Start the hover effect
+startIterativeHoverEffect();
