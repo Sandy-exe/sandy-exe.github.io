@@ -1718,6 +1718,12 @@ body {
     font-size: 12px;
   }
 
+  .card_image {
+    height: 75%;
+    width: 100%;
+    
+  }
+
   .card__title {
     font-size: 15px;
   }
