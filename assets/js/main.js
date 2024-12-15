@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   $(".back-to-top").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 2000, "easeInOutExpo");
+    $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
     return false;
   });
 
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           scrollTop: $(this.hash).offset().top - 45,
         },
-        2000,
+        1500,
         "easeInOutExpo"
       );
 
@@ -337,7 +337,7 @@ function startIterativeHoverEffect() {
 
     // Move to the next icon
     index = (index + 1) % socialIcons.length;
-  }, 1750); // Adjust the delay as needed (2 seconds here)
+  }, 1500); // Adjust the delay as needed (2 seconds here)
 }
 
 // Start the hover effect
