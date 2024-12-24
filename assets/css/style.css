@@ -1215,7 +1215,7 @@ body {
 }
 
 .portfolio-container {
-  width: 80%; /* Adjust to your desired width */
+  width: 90%; /* Adjust to your desired width */
   height: 800px; /* Adjust to your desired height */
   margin: 0 auto; /* Centers the container horizontally */
   overflow: hidden; /* Prevents overflowing content */
@@ -1344,7 +1344,7 @@ body {
   align-items: center; /* Vertically center the elements */
   justify-content: center; /* Horizontally center the elements */
   position: relative;
-  left: 100px;
+  left: 80px;
   bottom: 20px;
   cursor: pointer;
 }

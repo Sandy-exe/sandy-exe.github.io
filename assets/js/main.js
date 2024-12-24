@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
               slidesPerView: 2,
               spaceBetween: 30,
             },
-            1400: {
+            1300: {
               slidesPerView: 3,
               spaceBetween: 30,
             },
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
               slidesPerView: 2,
               spaceBetween: 30,
             },
-            1200: {
+            1300: {
               slidesPerView: 3,
               spaceBetween: 30,
             },
