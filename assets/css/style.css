@@ -16,10 +16,14 @@
 /*===========================
     1. COMMON css 
 ===========================*/
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800");
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", serif;
   font-weight: normal;
   font-style: normal;
   color: #8a8fa3;
@@ -86,7 +90,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: #32333c;
   margin: 0px;
@@ -714,6 +718,84 @@ p {
     3. About css 
 ===========================*/
 
+      
+.effect {
+     width: 100%; /* Adjust to your desired width */
+  height: 400px; /* Adjust to your desired height */
+  margin: 0 auto; /* Centers the container horizontally */
+  overflow: hidden; /* Prevents overflowing content */
+  padding-bottom: 20px ;
+  padding-top: 20px;
+}
+
+.effect h2 {
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.buttons a {
+  text-decoration: none !important;
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  line-height: 80px; /* Align text in the center */
+  border-radius: 15px;
+  font-size: 30px;
+  position: relative;
+  overflow: hidden;
+  background-color: #324468;
+  transition: transform 0.2s linear 0s, border-radius 0.2s linear 0.2s;
+  display: flex;             /* Use flexbox */
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+}
+
+.buttons a svg {
+  width: 40px;
+  height: 40px;
+  display: block; /* Ensure the SVG is displayed as a block */
+  margin: 0 auto; /* Center the SVG horizontally */
+}
+
+.buttons a img {
+  width: 40px;
+  height: 40px;
+  display: block; /* Ensure the SVG is displayed as a block */
+  margin: 0 auto; /* Center the SVG horizontally */
+}
+
+.buttons a svg {
+  position: relative;
+  z-index: 3;
+  transition: transform 0.2s linear 0s;
+}
+
+.buttons a img {
+  position: relative;
+  z-index: 3;
+  transition: transform 0.2s linear 0s;
+}
+
+.buttons a:hover {
+  transform: rotate(-90deg);
+  border-radius: 50%;
+}
+
+.buttons a:hover svg {
+  transform: rotate(90deg);
+}
+
+.buttons a:hover img {
+  transform: rotate(90deg);
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .about-section {
     padding-bottom: 100px;
@@ -775,6 +857,24 @@ p {
   .GOJO {
     right: 40px;
   }
+
+  .buttons a  {
+  height: 70px !important;
+  font-size: 27px !important;
+  line-height: 70px !important;
+  }
+
+  .buttons a svg {
+  height: 70px !important;
+  font-size: 27px !important;
+  line-height: 70px !important;
+  }
+
+  .buttons a img {
+  height: 70px !important;
+  font-size: 27px !important;
+  line-height: 70px !important;
+  }
 }
 
 .about .section-header {
@@ -795,20 +895,6 @@ p {
   font-size: 16px;
 }
 
-.about .skills {
-  margin-bottom: 30px;
-}
-
-.about .skill-name {
-  margin-top: 15px;
-}
-
-.about .skill-name p {
-  display: inline-block;
-  margin-bottom: 5px;
-  font-size: 16px;
-  font-weight: 400;
-}
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .about {
@@ -824,28 +910,14 @@ p {
   }
 }
 
-.about .skill-name p:last-child {
-  float: right;
-}
-
-.about .progress {
-  height: 10px;
-  border-radius: 10px;
-  background: #dddddd;
-}
-
-.about .progress .progress-bar {
-  width: 0px;
-  background: #658eab;
-  border-radius: 10px;
-  transition: 2s;
-}
 
 @media (max-width: 991.98px) {
   .about .about-content {
     padding: 45px 15px 0 15px;
   }
 }
+
+
 
 /*===========================
     4. Experience css 

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+ 
 
   const experienceTab = document.getElementById("Exp-Tab");
   console.log(experienceTab);
@@ -15,12 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     spaceBetween: 30,
     pagination: {
-      el: ".swiper-pagination",
+      el: ".mySwiper .swiper-pagination",
       clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next", // Next button
-      prevEl: ".swiper-button-prev", // Previous button
+      nextEl: ".mySwiper .swiper-button-next", // Next button
+      prevEl: ".mySwiper .swiper-button-prev", // Previous button
     },
     breakpoints: {
       300: {
@@ -41,12 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 3, // Number of slides visible at once
     spaceBetween: 30, // Space between slides in pixels
     pagination: {
-      el: ".swiper-pagination", // Pagination element
+      el: ".ArticleSwiper .swiper-pagination", // Pagination element
       clickable: true, // Enable clickable pagination
     },
     navigation: {
-      nextEl: ".card-container .swiper-button-next", // Next button
-      prevEl: ".card-container .swiper-button-prev", // Previous button
+      nextEl: ".ArticleSwiper .swiper-button-next", // Next button
+      prevEl: ".ArticleSwiper .swiper-button-prev", // Previous button
     },
     breakpoints: {
       300: {
@@ -59,6 +60,44 @@ document.addEventListener("DOMContentLoaded", () => {
       1200: {
         slidesPerView: 3,
         spaceBetween: 20,
+      },
+    },
+  });
+
+
+  
+  var swiper2 = new Swiper(".swiper-container", {
+    slidesPerView: 4, // Number of items per row
+    spaceBetween: 30, // Space between items
+
+    grid: {
+      rows: 3, // Restrict grid to 3 rows
+    },
+    pagination: {
+      el: ".swiper-container .swiper-pagination", // Pagination element
+      clickable: true, // Enable clickable pagination
+    },
+    navigation: {
+      nextEl: ".swiper-container .swiper-button-next",
+      prevEl: ".swiper-container .swiper-button-prev",
+    },
+    breakpoints: {
+      300: {
+        slidesPerView: 3,
+      },
+      500: {
+        slidesPerView: 4,
+      },
+      800: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1300: {
+        slidesPerView: 4,
+        spaceBetween: 30,
       },
     },
   });
@@ -102,12 +141,12 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           spaceBetween: 30,
           pagination: {
-            el: ".swiper-pagination",
+            el: ".mySwiper .swiper-pagination",
             clickable: true,
           },
           navigation: {
-            nextEl: ".swiper-button-next", // Next button
-            prevEl: ".swiper-button-prev", // Previous button
+            nextEl: ".mySwiper .swiper-button-next", // Next button
+            prevEl: ".mySwiper .swiper-button-prev", // Previous button
           },
           breakpoints: {
             300: {
@@ -157,12 +196,12 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           spaceBetween: 30,
           pagination: {
-            el: ".swiper-pagination",
+            el: ".mySwiper .swiper-pagination",
             clickable: true,
           },
           navigation: {
-            nextEl: ".swiper-button-next", // Next button
-            prevEl: ".swiper-button-prev", // Previous button
+            nextEl: ".mySwiper .swiper-button-next", // Next button
+            prevEl: ".mySwiper .swiper-button-prev", // Previous button
           },
           breakpoints: {
             300: {
