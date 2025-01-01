@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
       clickable: true,
     },
     navigation: {
-      nextEl: ".mySwiper .swiper-button-next", // Next button
-      prevEl: ".mySwiper .swiper-button-prev", // Previous button
+      nextEl: ".portfolio-container .swiper-button-next", // Next button
+      prevEl: ".portfolio-container .swiper-button-prev", // Previous button
     },
     breakpoints: {
       300: {
@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
       clickable: true, // Enable clickable pagination
     },
     navigation: {
-      nextEl: ".ArticleSwiper .swiper-button-next", // Next button
-      prevEl: ".ArticleSwiper .swiper-button-prev", // Previous button
+      nextEl: ".card-container .swiper-button-next", // Next button
+      prevEl: ".card-container .swiper-button-prev", // Previous button
     },
     breakpoints: {
       300: {

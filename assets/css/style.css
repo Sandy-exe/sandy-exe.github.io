@@ -749,7 +749,7 @@ p {
   border-radius: 15px;
   font-size: 30px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: #324468;
   transition: transform 0.2s linear 0s, border-radius 0.2s linear 0.2s;
   display: flex;             /* Use flexbox */
@@ -794,6 +794,38 @@ p {
 
 .buttons a:hover img {
   transform: rotate(90deg);
+}
+
+
+.tooltip {
+  position: absolute;
+  z-index: 1;
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
+  background: #324468;
+  opacity: 0;
+  color: white;
+  font-weight: 200;
+  font-size: 0.875rem;
+  transition: opacity 500ms, transform 500ms;
+  
+}
+
+.tooltip:before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: calc(50% - 10px);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+.buttons a:hover .tooltip {
+  opacity: 1;
+  transform: rotate(90deg) translateY(150%);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
